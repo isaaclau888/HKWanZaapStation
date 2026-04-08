@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSE倒數 - HK Study Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Simple DSE 2026 countdown (example date - change to actual date)
+    function updateCountdown() {
+      const dseDate = new Date("2026-04-01T09:00:00").getTime();
+      const now = new Date().getTime();
+      const distance = dseDate - now;
+
+      if (distance < 0) {
+        document.getElementById("countdown").innerHTML = "<p class='text-3xl text-red-600'>DSE已經開始！加油！</p>";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent = hours;
+      document.getElementById("minutes").textContent = minutes;
+    }
+
+    setInterval(updateCountdown, 60000);
+    window.onload = updateCountdown;
+  </script>
+</head>
+<body class="bg-zinc-50 text-zinc-800">
+
+  <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-2xl leading-none pt-0.5">📖</div>
+      <div>
+        <h1 class="text-2xl font-semibold tracking-tight">HK Study Hub</h1>
+        <p class="text-xs text-zinc-500 -mt-1">香港學生溫習小站</p>
+      </div>
+    </div>
+    
+    <div class="flex gap-2">
+      <a href="index.html" class="px-5 py-2.5 text-sm font-medium rounded-2xl hover:bg-zinc-100 transition">主頁</a>
+      <a href="resources.html" class="px-5 py-2.5 bg-blue-100 text-blue-700 font-semibold rounded-2xl">📚 溫習資源</a>
+      <a href="timetable.html" class="px-5 py-2.5 text-sm font-medium rounded-2xl hover:bg-zinc-100 transition">📅 考試時間表</a>
+      <a href="countdown.html" class="px-5 py-2.5 text-sm font-medium rounded-2xl hover:bg-zinc-100 transition">⏳ DSE倒數</a>
+    </div>
+  </div>
+</nav>
+
+  <div class="max-w-2xl mx-auto px-6 py-20 text-center">
+    <h2 class="text-5xl font-semibold mb-4">DSE 2026 倒數</h2>
+    <p class="text-zinc-600 mb-12">距離文憑試仲有…</p>
+
+    <div id="countdown" class="flex justify-center gap-8 text-center">
+      <div>
+        <div id="days" class="text-7xl font-bold text-blue-600">—</div>
+        <div class="text-sm text-zinc-500 mt-1">日</div>
+      </div>
+      <div>
+        <div id="hours" class="text-7xl font-bold text-blue-600">—</div>
+        <div class="text-sm text-zinc-500 mt-1">小時</div>
+      </div>
+      <div>
+        <div id="minutes" class="text-7xl font-bold text-blue-600">—</div>
+        <div class="text-sm text-zinc-500 mt-1">分鐘</div>
+      </div>
+    </div>
+
+    <p class="mt-16 text-sm text-zinc-500">
+      日期以官方公佈為準<br>
+      加油啊！每一天都係進步嘅機會 💪
+    </p>
+  </div>
+
+  <footer class="bg-zinc-900 text-zinc-400 py-10 text-sm">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p>© 2026 HK Study Hub – 由學生為學生而做</p>
+    </div>
+  </footer>
+</body>
+</html>
