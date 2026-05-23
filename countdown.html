@@ -6,9 +6,9 @@
   <title>DSE倒數 - HK WanZaap Station</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    // Simple DSE 2026 countdown (example date - change to actual date)
+
     function updateCountdown() {
-      const dseDate = new Date("2026-04-01T09:00:00").getTime();
+      const dseDate = new Date("2027-04-06T08:30:00").getTime();
       const now = new Date().getTime();
       const distance = dseDate - now;
 
@@ -20,13 +20,15 @@
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
       const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       document.getElementById("days").textContent = days;
       document.getElementById("hours").textContent = hours;
       document.getElementById("minutes").textContent = minutes;
+      document.getElementById("seconds").textContent = seconds;
     }
 
-    setInterval(updateCountdown, 60000);
+    setInterval(updateCountdown, 1000);
     window.onload = updateCountdown;
   </script>
 </head>
@@ -44,15 +46,15 @@
     
     <div class="flex gap-2">
       <a href="index.html" class="px-5 py-2.5 text-sm font-medium rounded-2xl hover:bg-zinc-100 transition">主頁</a>
-      <a href="resources.html" class="px-5 py-2.5 bg-blue-100 text-blue-700 font-semibold rounded-2xl">📚 溫習資源</a>
+      <a href="resources.html" class="px-5 py-2.5 text-sm font-medium rounded-2xl hover:bg-zinc-100 transition">📚 溫習資源</a>
       <a href="timetable.html" class="px-5 py-2.5 text-sm font-medium rounded-2xl hover:bg-zinc-100 transition">📅 考試時間表</a>
-      <a href="countdown.html" class="px-5 py-2.5 text-sm font-medium rounded-2xl hover:bg-zinc-100 transition">⏳ DSE倒數</a>
+      <a href="countdown.html" class="px-5 py-2.5 bg-blue-100 text-blue-700 font-semibold rounded-2xl">⏳ DSE倒數</a>
     </div>
   </div>
 </nav>
 
   <div class="max-w-2xl mx-auto px-6 py-20 text-center">
-    <h2 class="text-5xl font-semibold mb-4">DSE 2026 倒數</h2>
+    <h2 class="text-5xl font-semibold mb-4">DSE 2027 倒數</h2>
     <p class="text-zinc-600 mb-12">距離文憑試仲有…</p>
 
     <div id="countdown" class="flex justify-center gap-8 text-center">
@@ -67,6 +69,10 @@
       <div>
         <div id="minutes" class="text-7xl font-bold text-blue-600">—</div>
         <div class="text-sm text-zinc-500 mt-1">分鐘</div>
+      </div>
+      <div>
+        <div id="seconds" class="text-7xl font-bold text-blue-600">—</div>
+        <div class="text-sm text-zinc-500 mt-1">秒</div>
       </div>
     </div>
 
