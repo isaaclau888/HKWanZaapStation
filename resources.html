@@ -3,205 +3,533 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>溫習資源 - HK WanZaap Station</title>
+  <title>溫習資源 | HK WanZaap Station</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body { 
+      font-family: 'Inter', 'Noto Sans TC', sans-serif; 
+      letter-spacing: -0.01em;
+    }
+  </style>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+
+  <div class="bg-slate-50 border-b border-slate-200 text-center py-2 px-4 text-xs font-medium text-slate-600">
+    2027 HKDSE 備考專區：核心科目及選修科資源已同步更新。
+  </div>
+
+  <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-7 h-7 bg-slate-900 text-white rounded flex items-center justify-center font-bold text-xs">
+          WZ
+        </div>
+        <div class="flex items-baseline gap-2">
+          <span class="text-base font-bold tracking-tight text-slate-950">HK WanZaap Station</span>
+          <span class="hidden sm:inline text-xs text-slate-400 font-medium border-l border-slate-200 pl-2">香港學生溫習資源</span>
+        </div>
+      </a>
+      
+      <div class="hidden md:flex items-center gap-6 text-xs font-medium text-slate-500">
+        <a href="index.html" class="hover:text-slate-950 py-1 transition">主頁</a>
+        <a href="resources.html" class="text-slate-950 font-semibold border-b-2 border-slate-950 py-1">溫習資源</a>
+        <a href="timetable.html" class="hover:text-slate-950 py-1 transition">考試時間表</a>
+        <a href="countdown.html" class="hover:text-slate-950 py-1 transition">DSE 倒數</a>
+      </div>
+
+      <button id="nav-toggle" class="md:hidden p-1.5 rounded text-slate-600 border border-slate-200" aria-label="Toggle Navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+
+    <div id="nav-links" class="hidden border-t border-slate-200 bg-slate-50 px-4 py-2 flex-col gap-1 md:hidden text-xs font-medium">
+      <a href="index.html" class="px-3 py-2 text-slate-600 hover:text-slate-950">主頁</a>
+      <a href="resources.html" class="px-3 py-2 text-slate-950 bg-slate-200/50 rounded">溫習資源</a>
+      <a href="timetable.html" class="px-3 py-2 text-slate-600 hover:text-slate-950">考試時間表</a>
+      <a href="countdown.html" class="px-3 py-2 text-slate-600 hover:text-slate-950">DSE 倒數</a>
+    </div>
+  </nav>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-8 py-12">
+    
+    <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-slate-200 pb-6 mb-8 gap-4">
+      <div class="space-y-1">
+        <div class="border-l-2 border-slate-900 pl-4 py-0.5">
+          <h2 class="text-xl font-bold tracking-tight text-slate-950">DSE 溫習資源</h2>
+          <p class="text-xs text-slate-400">完整核心及選修科目精選筆記架構</p>
+        </div>
+      </div>
+      
+      <div class="flex items-center gap-1.5 bg-slate-100/80 p-1 rounded-lg self-start md:self-auto text-xs font-medium">
+        <button onclick="filterSubjects('all')" data-filter="all" class="filter-btn px-3 py-1.5 rounded-md transition bg-slate-950 text-white shadow-sm">
+          全部科目
+        </button>
+        <button onclick="filterSubjects('core')" data-filter="core" class="filter-btn px-3 py-1.5 rounded-md transition text-slate-600 hover:text-slate-950">
+          核心科目
+        </button>
+        <button onclick="filterSubjects('elective')" data-filter="elective" class="filter-btn px-3 py-1.5 rounded-md transition text-slate-600 hover:text-slate-950">
+          選修科目
+        </button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      
+      <div class="subject-card border border-slate-200/80 bg-white rounded-xl p-5 hover:border-slate-300 hover:shadow-sm transition flex flex-col justify-between" data-type="core">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-100 text-slate-600 rounded text-[10px] font-bold tracking-wide uppercase">Core</span>
+            <h3 class="text-sm font-bold text-slate-950">中國語文</h3>
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">文言字詞、十二篇範文重點、白話文閱讀理解及寫作框架。</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-100">
+          <a href="chinese.html" class="text-xs font-medium text-slate-900 hover:text-slate-600 inline-flex items-center gap-1 transition">
+            瀏覽筆記 <span class="text-[10px]">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="subject-card border border-slate-200/80 bg-white rounded-xl p-5 hover:border-slate-300 hover:shadow-sm transition flex flex-col justify-between" data-type="core">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-100 text-slate-600 rounded text-[10px] font-bold tracking-wide uppercase">Core</span>
+            <h3 class="text-sm font-bold text-slate-950">English Language</h3>
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">Paper 2 Writing column structures, formal vocabulary and integration skills.</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-100">
+          <a href="english.html" class="text-xs font-medium text-slate-900 hover:text-slate-600 inline-flex items-center gap-1 transition">
+            瀏覽筆記 <span class="text-[10px]">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="subject-card border border-slate-200/80 bg-white rounded-xl p-5 hover:border-slate-300 hover:shadow-sm transition flex flex-col justify-between" data-type="core">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-100 text-slate-600 rounded text-[10px] font-bold tracking-wide uppercase">Core</span>
+            <h3 class="text-sm font-bold text-slate-950">數學必修部分</h3>
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">常考公式彙整、LQ 拆題思維與多項選擇題（MC）速算技巧。</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-100">
+          <a href="#" class="text-xs font-medium text-slate-400 cursor-not-allowed inline-flex items-center gap-1">
+            資料整理中
+          </a>
+        </div>
+      </div>
+
+      <div class="subject-card border border-slate-200/80 bg-white rounded-xl p-5 hover:border-slate-300 hover:shadow-sm transition flex flex-col justify-between" data-type="core">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-100 text-slate-600 rounded text-[10px] font-bold tracking-wide uppercase">Core</span>
+            <h3 class="text-sm font-bold text-slate-950">公民與社會發展</h3>
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">三大主題核心概念、官方評核大綱重點與重要歷史脈絡整合。</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-100">
+          <a href="csd.html" class="text-xs font-medium text-slate-900 hover:text-slate-600 inline-flex items-center gap-1 transition">
+            瀏覽筆記 <span class="text-[10px]">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="subject-card border border-slate-200/80 bg-white rounded-xl p-5 hover:border-slate-300 hover:shadow-sm transition flex flex-col justify-between" data-type="elective">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-50 border border-slate-200 text-slate-500 rounded text-[10px] font-bold tracking-wide uppercase">Elective</span>
+            <h3 class="text-sm font-bold text-slate-950">中國文學</h3>
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">文學賞析要領、詩詞歌賦與小說文本深層意蘊拆解、寫作手法分析。</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-100">
+          <a href="#" class="text-xs font-medium text-slate-400 cursor-not-allowed inline-flex items-center gap-1">
+            資料整理中
+          </a>
+        </div>
+      </div>
+
+      <div class="subject-card border border-slate-200/80 bg-white rounded-xl p-5 hover:border-slate-300 hover:shadow-sm transition flex flex-col justify-between" data-type="elective">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-50 border border-slate-200 text-slate-500 rounded text-[10px] font-bold tracking-wide uppercase">Elective</span>
+            <h3 class="text-sm font-bold text-slate-950">Literature in English</h3>
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">Analysis of novels, poetry, and drama pieces. Structural themes and essays.</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-100">
+          <a href="#" class="text-xs font-medium text-slate-400 cursor-not-allowed inline-flex items-center gap-1">
+            資料整理中
+          </a>
+        </div>
+      </div>
+
+      <div class="subject-card border border-slate-200/80 bg-white rounded-xl p-5 hover:border-slate-300 hover:shadow-sm transition flex flex-col justify-between" data-type="elective">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-50 border border-slate-200 text-slate-500 rounded text-[10px] font-bold tracking-wide uppercase">Elective</span>
+            <h3 class="text-sm font-bold text-slate-950">數學延伸部分 (M1/M2)</h3>
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">微積分基礎定理、矩陣 (Matrix)、向量 (Vector) 運算與常考證題步驟。</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-100">
+          <a href="#" class="text-xs font-medium text-slate-400 cursor-not-allowed inline-flex items-center gap-1">
+            資料整理中
+          </a>
+        </div>
+      </div>
+
+      <div class="subject-card border border-slate-200/80 bg-white rounded-xl p-5 hover:border-slate-300 hover:shadow-sm transition flex flex-col justify-between" data-type="elective">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-50 border border-slate-200 text-slate-500 rounded text-[10px] font-bold tracking-wide uppercase">Elective</span>
+            <h3 class="text-sm font-bold text-slate-950">物理 Physics</h3>
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">熱學、力學、波動學及電磁學核心考點、圖表分析應試心得。</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-100">
+          <a href="#" class="text-xs font-medium text-slate-400 cursor-not-allowed inline-flex items-center gap-1">
+            資料整理中
+          </a>
+        </div>
+      </div>
+
+      <div class="subject-card border border-slate-200/80 bg-white rounded-xl p-5 hover:border-slate-300 hover:shadow-sm transition flex flex-col justify-between" data-type="elective">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-50 border border-slate-200 text-slate-500 rounded text-[10px] font-bold tracking-wide uppercase">Elective</span>
+            <h3 class="text-sm font-bold text-slate-950">化學 Chemistry</h3>
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">化學鍵、微觀世界、酸和鹼、化學反應速率及有機化學機制。</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-100">
+          <a href="#" class="text-xs font-medium text-slate-400 cursor-not-allowed inline-flex items-center gap-1">
+            資料整理中
+          </a>
+        </div>
+      </div>
+
+      <div class="subject-card border border-slate-200/80 bg-white rounded-xl p-5 hover:border-slate-300 hover:shadow-sm transition flex flex-col justify-between" data-type="elective">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-50 border border-slate-200 text-slate-500 rounded text-[10px] font-bold tracking-wide uppercase">Elective</span>
+            <h3 class="text-sm font-bold text-slate-950">生物 Biology</h3>
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">細胞與生命分子、遺傳與進化、生物體內的平衡及生態學。</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-100">
+          <a href="#" class="text-xs font-medium text-slate-400 cursor-not-allowed inline-flex items-center gap-1">
+            資料整理中
+          </a>
+        </div>
+      </div>
+
+      <div class="subject-card border border-slate-200/80 bg-white rounded-xl p-5 hover:border-slate-300 hover:shadow-sm transition flex flex-col justify-between" data-type="elective">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-50 border border-slate-200 text-slate-500 rounded text-[10px] font-bold tracking-wide uppercase">Elective</span>
+            <h3 class="text-sm font-bold text-slate-950">組合科學 Combined Science</h3>
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">跨學科科學常規概念整合（物理／化學／生物部分選修組合重點）。</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-100">
+          <a href="#" class="text-xs font-medium text-slate-400 cursor-not-allowed inline-flex items-center gap-1">
+            資料整理中
+          </a>
+        </div>
+      </div>
+
+      <div class="subject-card border border-slate-200/80 bg-white rounded-xl p-5 hover:border-slate-300 hover:shadow-sm transition flex flex-col justify-between" data-type="elective">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-50 border border-slate-200 text-slate-500 rounded text-[10px] font-bold tracking-wide uppercase">Elective</span>
+            <h3 class="text-sm font-bold text-slate-950">綜合科學 Integrated Science</h3>
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">圍繞生命科學、環境與物理世界的核心宏觀科學理論框架。</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-100">
+          <a href="#" class="text-xs font-medium text-slate-400 cursor-not-allowed inline-flex items-center gap-1">
+            資料整理中
+          </a>
+        </div>
+      </div>
+
+      <div class="subject-card border border-slate-200/80 bg-white rounded-xl p-5 hover:border-slate-300 hover:shadow-sm transition flex flex-col justify-between" data-type="elective">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-50 border border-slate-200 text-slate-500 rounded text-[10px] font-bold tracking-wide uppercase">Elective</span>
+            <h3 class="text-sm font-bold text-slate-950">資訊及通訊科技 (ICT)</h3>
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">網絡基礎、資料庫運作 (SQL)、演算法邏輯與必考理論精選。</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-100">
+          <a href="#" class="text-xs font-medium text-slate-400 cursor-not-allowed inline-flex items-center gap-1">
+            資料整理中
+          </a>
+        </div>
+      </div>
+
+      <div class="subject-card border border-slate-200/80 bg-white rounded-xl p-5 hover:border-slate-300 hover:shadow-sm transition flex flex-col justify-between" data-type="elective">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-50 border border-slate-200 text-slate-500 rounded text-[10px] font-bold tracking-wide uppercase">Elective</span>
+            <h3 class="text-sm font-bold text-slate-950">設計與應用科技 (DAT)</h3>
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">設計思考、系統與控制（機械/電子邏輯）、工程繪圖基礎與材料特性。</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-100">
+          <a href="#" class="text-xs font-medium text-slate-400 cursor-not-allowed inline-flex items-center gap-1">
+            資料整理中
+          </a>
+        </div>
+      </div>
+
+      <div class="subject-card border border-slate-200/80 bg-white rounded-xl p-5 hover:border-slate-300 hover:shadow-sm transition flex flex-col justify-between" data-type="elective">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-50 border border-slate-200 text-slate-500 rounded text-[10px] font-bold tracking-wide uppercase">Elective</span>
+            <h3 class="text-sm font-bold text-slate-950">經濟 Economics</h3>
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">廠商與生產、市場與價格機制、國民收入決定及國際貿易理論。</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-100">
+          <a href="#" class="text-xs font-medium text-slate-400 cursor-not-allowed inline-flex items-center gap-1">
+            資料整理中
+          </a>
+        </div>
+      </div>
+
+      <div class="subject-card border border-slate-200/80 bg-white rounded-xl p-5 hover:border-slate-300 hover:shadow-sm transition flex flex-col justify-between" data-type="elective">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-50 border border-slate-200 text-slate-500 rounded text-[10px] font-bold tracking-wide uppercase">Elective</span>
+            <h3 class="text-sm font-bold text-slate-950">企業、會計與財務概論</h3>
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">營商環境、基礎會計循環、財務報表分析與市場營銷管理概念。</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-100">
+          <a href="#" class="text-xs font-medium text-slate-400 cursor-not-allowed inline-flex items-center gap-1">
+            資料整理中
+          </a>
+        </div>
+      </div>
+
+      <div class="subject-card border border-slate-200/80 bg-white rounded-xl p-5 hover:border-slate-300 hover:shadow-sm transition flex flex-col justify-between" data-type="elective">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-50 border border-slate-200 text-slate-500 rounded text-[10px] font-bold tracking-wide uppercase">Elective</span>
+            <h3 class="text-sm font-bold text-slate-950">科技與生活</h3>
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">食品科學與營養學原理、或服裝與紡織科技的設計與材料分析。</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-100">
+          <a href="#" class="text-xs font-medium text-slate-400 cursor-not-allowed inline-flex items-center gap-1">
+            資料整理中
+          </a>
+        </div>
+      </div>
+
+      <div class="subject-card border border-slate-200/80 bg-white rounded-xl p-5 hover:border-slate-300 hover:shadow-sm transition flex flex-col justify-between" data-type="elective">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-50 border border-slate-200 text-slate-500 rounded text-[10px] font-bold tracking-wide uppercase">Elective</span>
+            <h3 class="text-sm font-bold text-slate-950">旅遊與款待</h3>
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">旅遊業系統引論、款待業趨勢、客務及餐飲運作的核心概念與分析。</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-100">
+          <a href="#" class="text-xs font-medium text-slate-400 cursor-not-allowed inline-flex items-center gap-1">
+            資料整理中
+          </a>
+        </div>
+      </div>
+
+      <div class="subject-card border border-slate-200/80 bg-white rounded-xl p-5 hover:border-slate-300 hover:shadow-sm transition flex flex-col justify-between" data-type="elective">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-50 border border-slate-200 text-slate-500 rounded text-[10px] font-bold tracking-wide uppercase">Elective</span>
+            <h3 class="text-sm font-bold text-slate-950">健康管理與社會關懷</h3>
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">個人生理與心理健康發展、社會福利政策、醫療健康體系概念。</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-100">
+          <a href="#" class="text-xs font-medium text-slate-400 cursor-not-allowed inline-flex items-center gap-1">
+            資料整理中
+          </a>
+        </div>
+      </div>
+
+      <div class="subject-card border border-slate-200/80 bg-white rounded-xl p-5 hover:border-slate-300 hover:shadow-sm transition flex flex-col justify-between" data-type="elective">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-50 border border-slate-200 text-slate-500 rounded text-[10px] font-bold tracking-wide uppercase">Elective</span>
+            <h3 class="text-sm font-bold text-slate-950">倫理與宗教</h3>
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">規範倫理學理論（功利主義/義務論）、個人與社會倫理議題、宗教教義。</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-100">
+          <a href="#" class="text-xs font-medium text-slate-400 cursor-not-allowed inline-flex items-center gap-1">
+            資料整理中
+          </a>
+        </div>
+      </div>
+
+      <div class="subject-card border border-slate-200/80 bg-white rounded-xl p-5 hover:border-slate-300 hover:shadow-sm transition flex flex-col justify-between" data-type="elective">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-50 border border-slate-200 text-slate-500 rounded text-[10px] font-bold tracking-wide uppercase">Elective</span>
+            <h3 class="text-sm font-bold text-slate-950">中國歷史</h3>
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">歷代甲部及乙部政治史、重要制度演變與歷史事件因果因由分析。</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-100">
+          <a href="#" class="text-xs font-medium text-slate-400 cursor-not-allowed inline-flex items-center gap-1">
+            資料整理中
+          </a>
+        </div>
+      </div>
+
+      <div class="subject-card border border-slate-200/80 bg-white rounded-xl p-5 hover:border-slate-300 hover:shadow-sm transition flex flex-col justify-between" data-type="elective">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-50 border border-slate-200 text-slate-500 rounded text-[10px] font-bold tracking-wide uppercase">Elective</span>
+            <h3 class="text-sm font-bold text-slate-950">歷史 History</h3>
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">二十世紀亞洲與歐洲歷史巨變、國際合作與冷戰時期應試答題要領。</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-100">
+          <a href="#" class="text-xs font-medium text-slate-400 cursor-not-allowed inline-flex items-center gap-1">
+            資料整理中
+          </a>
+        </div>
+      </div>
+
+      <div class="subject-card border border-slate-200/80 bg-white rounded-xl p-5 hover:border-slate-300 hover:shadow-sm transition flex flex-col justify-between" data-type="elective">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-50 border border-slate-200 text-slate-500 rounded text-[10px] font-bold tracking-wide uppercase">Elective</span>
+            <h3 class="text-sm font-bold text-slate-950">地理 Geography</h3>
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">板塊構造、河流與海岸地貌、氣候轉變與可持續發展考點拆解。</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-100">
+          <a href="#" class="text-xs font-medium text-slate-400 cursor-not-allowed inline-flex items-center gap-1">
+            資料整理中
+          </a>
+        </div>
+      </div>
+
+      <div class="subject-card border border-slate-200/80 bg-white rounded-xl p-5 hover:border-slate-300 hover:shadow-sm transition flex flex-col justify-between" data-type="elective">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-50 border border-slate-200 text-slate-500 rounded text-[10px] font-bold tracking-wide uppercase">Elective</span>
+            <h3 class="text-sm font-bold text-slate-950">視覺藝術</h3>
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">藝術評論寫作要領、評賞詞彙卡、作品集 (Portfolio) 整理方向與要點。</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-100">
+          <a href="#" class="text-xs font-medium text-slate-400 cursor-not-allowed inline-flex items-center gap-1">
+            資料整理中
+          </a>
+        </div>
+      </div>
+
+      <div class="subject-card border border-slate-200/80 bg-white rounded-xl p-5 hover:border-slate-300 hover:shadow-sm transition flex flex-col justify-between" data-type="elective">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-50 border border-slate-200 text-slate-500 rounded text-[10px] font-bold tracking-wide uppercase">Elective</span>
+            <h3 class="text-sm font-bold text-slate-950">音樂 Music</h3>
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">西方歌劇、中國戲曲、廣東流行音樂史、聽音與音樂結構分析能力。</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-100">
+          <a href="#" class="text-xs font-medium text-slate-400 cursor-not-allowed inline-flex items-center gap-1">
+            資料整理中
+          </a>
+        </div>
+      </div>
+
+      <div class="subject-card border border-slate-200/80 bg-white rounded-xl p-5 hover:border-slate-300 hover:shadow-sm transition flex flex-col justify-between" data-type="elective">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-50 border border-slate-200 text-slate-500 rounded text-[10px] font-bold tracking-wide uppercase">Elective</span>
+            <h3 class="text-sm font-bold text-slate-950">體育 PE</h3>
+          </div>
+          <p class="text-[11px] text-slate-400 leading-relaxed">人體運動學、體能評估、運動創傷預防、以及大型運動賽事管理核心理論。</p>
+        </div>
+        <div class="mt-4 pt-3 border-t border-slate-100">
+          <a href="#" class="text-xs font-medium text-slate-400 cursor-not-allowed inline-flex items-center gap-1">
+            資料整理中
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mt-16 bg-slate-50 border border-slate-200/60 rounded-xl p-6 max-w-3xl mx-auto text-center text-xs text-slate-400 leading-relaxed">
+      <p class="font-medium text-slate-500">所有內容均為平台原創整理或公開交流成果，僅供個人學習用途。我們絕不提供或上載任何未經授權之官方考試試卷或歷屆版權評卷參考。</p>
+      <p class="mt-2">如欲獲取官方歷屆試題、樣本試卷或評卷指引，請直接前往 
+        <a href="https://www.hkeaa.edu.hk/" target="_blank" class="underline text-slate-600 hover:text-slate-900">香港考試及評核局 (HKEAA) 官網</a> 查閱或購買正版書籍。
+      </p>
+    </div>
+
+  </main>
+
+  <footer class="bg-white border-t border-slate-200 mt-16 py-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8 text-slate-400 text-[11px] leading-relaxed">
+      <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
+        <div>
+          <p class="font-medium text-slate-600">© 2027 HK WanZaap Station — 專為香港學生而設的自主學習筆記平台</p>
+          <p class="mt-0.5">聲明：本站資源僅供個人溫習與學術交流用途。歷屆試題與官方答案請直接向香港考評局購買。</p>
+        </div>
+        <div class="flex gap-4">
+          <a href="https://www.hkeaa.edu.hk/" target="_blank" class="hover:text-slate-600 underline">HKEAA 考評局</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
   <script>
     function filterSubjects(type) {
       document.querySelectorAll('.subject-card').forEach(card => {
         if (type === 'all') {
-          card.style.display = 'block';
+          card.style.display = 'flex';
         } else {
-          card.style.display = card.dataset.type === type ? 'block' : 'none';
+          card.style.display = card.dataset.type === type ? 'flex' : 'none';
         }
       });
 
-      // Highlight active button
       document.querySelectorAll('.filter-btn').forEach(btn => {
         if (btn.dataset.filter === type) {
-          btn.classList.add('bg-blue-600', 'text-white');
-          btn.classList.remove('bg-white', 'text-zinc-700', 'border', 'border-zinc-300');
+          btn.classList.add('bg-slate-950', 'text-white', 'shadow-sm');
+          btn.classList.remove('text-slate-600', 'hover:text-slate-950');
         } else {
-          btn.classList.remove('bg-blue-600', 'text-white');
-          btn.classList.add('bg-white', 'text-zinc-700', 'border', 'border-zinc-300');
+          btn.classList.remove('bg-slate-950', 'text-white', 'shadow-sm');
+          btn.classList.add('text-slate-600', 'hover:text-slate-950');
         }
       });
     }
+
+    // 行動端導航欄 Toggle 邏輯
+    (function(){
+      const btn = document.getElementById('nav-toggle');
+      const links = document.getElementById('nav-links');
+      if(!btn || !links) return;
+      btn.addEventListener('click', ()=>{
+        if(links.classList.contains('hidden')){
+          links.classList.remove('hidden');
+          links.classList.add('flex');
+        } else {
+          links.classList.add('hidden');
+          links.classList.remove('flex');
+        }
+      });
+    })();
   </script>
-</head>
-<body class="bg-zinc-50 text-zinc-800">
 
-  <!-- Navigation Bar -->
-  <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-9 h-9 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-2xl leading-none pt-0.5">📖</div>
-        <div>
-          <h1 class="text-2xl font-semibold tracking-tight">HK WanZaap Station</h1>
-          <p class="text-xs text-zinc-500 -mt-1">香港學生溫習小站</p>
-        </div>
-      </div>
-      
-      <div class="flex gap-2 text-sm">
-        <a href="index.html" class="px-5 py-2.5 font-medium rounded-2xl hover:bg-zinc-100 transition">主頁</a>
-        <a href="resources.html" class="px-5 py-2.5 bg-blue-100 text-blue-700 font-semibold rounded-2xl">📚 溫習資源</a>
-        <a href="timetable.html" class="px-5 py-2.5 font-medium rounded-2xl hover:bg-zinc-100 transition">📅 考試時間表</a>
-        <a href="countdown.html" class="px-5 py-2.5 font-medium rounded-2xl hover:bg-zinc-100 transition">⏳ DSE倒數</a>
-      </div>
-    </div>
-  </nav>
-
-  <div class="max-w-6xl mx-auto px-6 py-12">
-    <h2 class="text-4xl font-semibold mb-8 text-center">溫習資源</h2>
-    
-    <div class="bg-white rounded-3xl shadow-sm border p-10">
-      <p class="text-center text-zinc-600 mb-8">以下係我哋為各科準備嘅溫習筆記同材料（持續更新中）</p>
-
-      <!-- Selection Bar -->
-      <div class="flex justify-center mb-10">
-        <div class="inline-flex bg-zinc-100 rounded-3xl p-1 shadow-inner">
-          <button onclick="filterSubjects('all')" 
-                  data-filter="all"
-                  class="filter-btn px-8 py-3 text-sm font-medium rounded-3xl transition-all bg-blue-600 text-white">
-            全部科目
-          </button>
-          <button onclick="filterSubjects('core')" 
-                  data-filter="core"
-                  class="filter-btn px-8 py-3 text-sm font-medium rounded-3xl transition-all bg-white text-zinc-700 border border-zinc-300">
-            Core 核心科目
-          </button>
-          <button onclick="filterSubjects('elective')" 
-                  data-filter="elective"
-                  class="filter-btn px-8 py-3 text-sm font-medium rounded-3xl transition-all bg-white text-zinc-700 border border-zinc-300">
-            Electives 選修科目
-          </button>
-        </div>
-      </div>
-
-      <!-- Subjects Grid -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <!-- Core Subjects -->
-        <div class="subject-card border rounded-2xl p-6 hover:shadow-md transition" data-type="core">
-          <h3 class="font-semibold">Chinese Language 中國語文</h3>
-          <a href="chinese.html" class="mt-3 text-blue-600 text-sm inline-block hover:underline">睇筆記 →</a>
-        </div>
-        <div class="subject-card border rounded-2xl p-6 hover:shadow-md transition" data-type="core">
-          <h3 class="font-semibold">English Language 英國語文</h3>
-          <a href="english.html" class="mt-3 text-blue-600 text-sm inline-block hover:underline">睇筆記 →</a>
-        </div>
-        <div class="subject-card border rounded-2xl p-6 hover:shadow-md transition" data-type="core">
-          <h3 class="font-semibold">Mathematics (Compulsory Part)<br>數學（必修部分）</h3>
-          <a href="#" class="mt-3 text-blue-600 text-sm inline-block hover:underline">睇筆記 →</a>
-        </div>
-        <div class="subject-card border rounded-2xl p-6 hover:shadow-md transition" data-type="core">
-          <h3 class="font-semibold">Citizenship and Social Development<br>公民與社會發展</h3>
-          <a href="#" class="mt-3 text-blue-600 text-sm inline-block hover:underline">睇筆記 →</a>
-        </div>
-
-        <!-- Elective Subjects (all the rest from your list) -->
-        <div class="subject-card border rounded-2xl p-6 hover:shadow-md transition" data-type="elective">
-          <h3 class="font-semibold">Biology 生物</h3>
-          <a href="#" class="mt-3 text-blue-600 text-sm inline-block hover:underline">睇筆記 →</a>
-        </div>
-        <div class="subject-card border rounded-2xl p-6 hover:shadow-md transition" data-type="elective">
-          <h3 class="font-semibold">Business, Accounting and Financial Studies<br>企業、會計與財務概論</h3>
-          <a href="#" class="mt-3 text-blue-600 text-sm inline-block hover:underline">睇筆記 →</a>
-        </div>
-        <div class="subject-card border rounded-2xl p-6 hover:shadow-md transition" data-type="elective">
-          <h3 class="font-semibold">Chemistry 化學</h3>
-          <a href="#" class="mt-3 text-blue-600 text-sm inline-block hover:underline">睇筆記 →</a>
-        </div>
-        <div class="subject-card border rounded-2xl p-6 hover:shadow-md transition" data-type="elective">
-          <h3 class="font-semibold">Chinese History 中國歷史</h3>
-          <a href="#" class="mt-3 text-blue-600 text-sm inline-block hover:underline">睇筆記 →</a>
-        </div>
-        <div class="subject-card border rounded-2xl p-6 hover:shadow-md transition" data-type="elective">
-          <h3 class="font-semibold">Chinese Literature 中國文學</h3>
-          <a href="#" class="mt-3 text-blue-600 text-sm inline-block hover:underline">睇筆記 →</a>
-        </div>
-        <div class="subject-card border rounded-2xl p-6 hover:shadow-md transition" data-type="elective">
-          <h3 class="font-semibold">Combined Science 組合科學</h3>
-          <a href="#" class="mt-3 text-blue-600 text-sm inline-block hover:underline">睇筆記 →</a>
-        </div>
-        <div class="subject-card border rounded-2xl p-6 hover:shadow-md transition" data-type="elective">
-          <h3 class="font-semibold">Design and Applied Technology<br>設計與應用科技</h3>
-          <a href="#" class="mt-3 text-blue-600 text-sm inline-block hover:underline">睇筆記 →</a>
-        </div>
-        <div class="subject-card border rounded-2xl p-6 hover:shadow-md transition" data-type="elective">
-          <h3 class="font-semibold">Economics 經濟</h3>
-          <a href="#" class="mt-3 text-blue-600 text-sm inline-block hover:underline">睇筆記 →</a>
-        </div>
-        <div class="subject-card border rounded-2xl p-6 hover:shadow-md transition" data-type="elective">
-          <h3 class="font-semibold">Ethics and Religious Studies<br>倫理與宗教</h3>
-          <a href="#" class="mt-3 text-blue-600 text-sm inline-block hover:underline">睇筆記 →</a>
-        </div>
-        <div class="subject-card border rounded-2xl p-6 hover:shadow-md transition" data-type="elective">
-          <h3 class="font-semibold">Geography 地理</h3>
-          <a href="#" class="mt-3 text-blue-600 text-sm inline-block hover:underline">睇筆記 →</a>
-        </div>
-        <div class="subject-card border rounded-2xl p-6 hover:shadow-md transition" data-type="elective">
-          <h3 class="font-semibold">Health Management and Social Care<br>健康管理與社會關懷</h3>
-          <a href="#" class="mt-3 text-blue-600 text-sm inline-block hover:underline">睇筆記 →</a>
-        </div>
-        <div class="subject-card border rounded-2xl p-6 hover:shadow-md transition" data-type="elective">
-          <h3 class="font-semibold">History 歷史</h3>
-          <a href="#" class="mt-3 text-blue-600 text-sm inline-block hover:underline">睇筆記 →</a>
-        </div>
-        <div class="subject-card border rounded-2xl p-6 hover:shadow-md transition" data-type="elective">
-          <h3 class="font-semibold">Information and Communication Technology<br>資訊及通訊科技</h3>
-          <a href="#" class="mt-3 text-blue-600 text-sm inline-block hover:underline">睇筆記 →</a>
-        </div>
-        <div class="subject-card border rounded-2xl p-6 hover:shadow-md transition" data-type="elective">
-          <h3 class="font-semibold">Integrated Science 綜合科學</h3>
-          <a href="#" class="mt-3 text-blue-600 text-sm inline-block hover:underline">睇筆記 →</a>
-        </div>
-        <div class="subject-card border rounded-2xl p-6 hover:shadow-md transition" data-type="elective">
-          <h3 class="font-semibold">Literature in English 英語文學</h3>
-          <a href="#" class="mt-3 text-blue-600 text-sm inline-block hover:underline">睇筆記 →</a>
-        </div>
-        <div class="subject-card border rounded-2xl p-6 hover:shadow-md transition" data-type="elective">
-          <h3 class="font-semibold">Mathematics (Extended Part)<br>數學（延伸部分）</h3>
-          <a href="#" class="mt-3 text-blue-600 text-sm inline-block hover:underline">睇筆記 →</a>
-        </div>
-        <div class="subject-card border rounded-2xl p-6 hover:shadow-md transition" data-type="elective">
-          <h3 class="font-semibold">Music 音樂</h3>
-          <a href="#" class="mt-3 text-blue-600 text-sm inline-block hover:underline">睇筆記 →</a>
-        </div>
-        <div class="subject-card border rounded-2xl p-6 hover:shadow-md transition" data-type="elective">
-          <h3 class="font-semibold">Physical Education 體育</h3>
-          <a href="#" class="mt-3 text-blue-600 text-sm inline-block hover:underline">睇筆記 →</a>
-        </div>
-        <div class="subject-card border rounded-2xl p-6 hover:shadow-md transition" data-type="elective">
-          <h3 class="font-semibold">Physics 物理</h3>
-          <a href="#" class="mt-3 text-blue-600 text-sm inline-block hover:underline">睇筆記 →</a>
-        </div>
-        <div class="subject-card border rounded-2xl p-6 hover:shadow-md transition" data-type="elective">
-          <h3 class="font-semibold">Technology and Living<br>科技與生活</h3>
-          <a href="#" class="mt-3 text-blue-600 text-sm inline-block hover:underline">睇筆記 →</a>
-        </div>
-        <div class="subject-card border rounded-2xl p-6 hover:shadow-md transition" data-type="elective">
-          <h3 class="font-semibold">Tourism and Hospitality Studies<br>旅遊與款待</h3>
-          <a href="#" class="mt-3 text-blue-600 text-sm inline-block hover:underline">睇筆記 →</a>
-        </div>
-        <div class="subject-card border rounded-2xl p-6 hover:shadow-md transition" data-type="elective">
-          <h3 class="font-semibold">Visual Arts 視覺藝術</h3>
-          <a href="#" class="mt-3 text-blue-600 text-sm inline-block hover:underline">睇筆記 →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="mt-12 text-center text-sm text-zinc-500 max-w-2xl mx-auto">
-      <p>所有內容只供個人學習用途。我們唔會提供或上載任何官方考試試題或過去試卷。</p>
-      <p class="mt-3">官方過去試題、樣本試卷同評卷參考，請到 
-        <a href="https://www.hkeaa.edu.hk/" target="_blank" class="underline text-blue-600">HKEAA 官網</a> 攞取。
-      </p>
-    </div>
-  </div>
-
-  <footer class="bg-zinc-900 text-zinc-400 py-10 text-sm">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <p>© 2026 HK WanZaap Station – 由學生為學生而做</p>
-    </div>
-  </footer>
 </body>
 </html>

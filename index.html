@@ -3,101 +3,186 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HK WanZaap Station | 免費溫習筆記同學習資源</title>
+  <title>HK WanZaap Station | HKDSE 免費溫習筆記及應試資源平台</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-    .hero-bg { background: linear-gradient(135deg, #2563eb 0%, #1e3a8a 100%); }
+    body { 
+      font-family: 'Inter', 'Noto Sans TC', sans-serif; 
+      letter-spacing: -0.01em;
+    }
   </style>
 </head>
-<body class="bg-zinc-50 text-zinc-800">
+<body class="bg-white text-slate-900 antialiased">
 
-  <!-- Navigation Bar -->
-  <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-9 h-9 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-2xl leading-none pt-0.5">📖</div>
-        <div>
-          <h1 class="text-2xl font-semibold tracking-tight">HK WanZaap Station</h1>
-          <p class="text-xs text-zinc-500 -mt-1">香港學生溫習小站</p>
+  <div class="bg-slate-50 border-b border-slate-200 text-center py-2 px-4 text-xs font-medium text-slate-600">
+    2027 HKDSE 備考專區：核心科目及選修科資源已同步更新。
+  </div>
+
+  <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-7 h-7 bg-slate-900 text-white rounded flex items-center justify-center font-bold text-xs">
+          WZ
         </div>
-      </div>
+        <div class="flex items-baseline gap-2">
+          <span class="text-base font-bold tracking-tight text-slate-950">HK WanZaap Station</span>
+          <span class="hidden sm:inline text-xs text-slate-400 font-medium border-l border-slate-200 pl-2">香港學生溫習資源</span>
+        </div>
+      </a>
       
-      <div class="flex gap-2 text-sm">
-        <a href="index.html" class="px-5 py-2.5 font-medium rounded-2xl hover:bg-zinc-100 transition">主頁</a>
-        <a href="resources.html" class="px-5 py-2.5 font-medium rounded-2xl hover:bg-zinc-100 transition">📚 溫習資源</a>
-        <a href="timetable.html" class="px-5 py-2.5 font-medium rounded-2xl hover:bg-zinc-100 transition">📅 考試時間表</a>
-        <a href="countdown.html" class="px-5 py-2.5 font-medium rounded-2xl hover:bg-zinc-100 transition">⏳ DSE倒數</a>
+      <div class="hidden md:flex items-center gap-6 text-xs font-medium text-slate-500">
+        <a href="index.html" class="text-slate-950 font-semibold border-b-2 border-slate-950 py-1">主頁</a>
+        <a href="resources.html" class="hover:text-slate-950 py-1 transition">溫習資源</a>
+        <a href="timetable.html" class="hover:text-slate-950 py-1 transition">考試時間表</a>
+        <a href="countdown.html" class="hover:text-slate-950 py-1 transition">DSE 倒數</a>
       </div>
+
+      <button id="nav-toggle" class="md:hidden p-1.5 rounded text-slate-600 border border-slate-200" aria-label="Toggle Navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+
+    <div id="nav-links" class="hidden border-t border-slate-200 bg-slate-50 px-4 py-2 flex-col gap-1 md:hidden text-xs font-medium">
+      <a href="index.html" class="px-3 py-2 text-slate-950 bg-slate-200/50 rounded">主頁</a>
+      <a href="resources.html" class="px-3 py-2 text-slate-600 hover:text-slate-950">溫習資源</a>
+      <a href="timetable.html" class="px-3 py-2 text-slate-600 hover:text-slate-950">考試時間表</a>
+      <a href="countdown.html" class="px-3 py-2 text-slate-600 hover:text-slate-950">DSE 倒數</a>
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero-bg text-white py-28">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-xs font-medium px-5 py-2 rounded-3xl mb-8">
-        <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-        專為中學生而設
-      </div>
+  <main class="max-w-6xl mx-auto px-4 sm:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
       
-      <h2 class="text-5xl leading-tight font-semibold tracking-tighter mb-6">
-        一齊溫書，<br>輕鬆啲面對HKDSE!
-      </h2>
-      
-      <p class="text-xl text-blue-100 max-w-lg mx-auto mb-10">
-        清楚易明嘅科目筆記 + 實用溫習Tips<br>
-        希望幫到你每日學習多啲
-      </p>
+      <div class="lg:col-span-4 space-y-6">
+        <div class="border-l-2 border-slate-900 pl-4 py-1">
+          <h2 class="text-xl font-bold tracking-tight text-slate-950">HKDSE 2027</h2>
+          <p class="text-xs text-slate-400 mt-0.5">自主學習、精簡架構、備考資源</p>
+        </div>
+        
+        <p class="text-xs text-slate-500 leading-relaxed max-w-sm">
+          本站致力將複雜的考評局課程綱要轉化為結構化的筆記精華，協助香港中學生在有限時間內建立清晰的學科知識脈絡。
+        </p>
 
-      <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
-        <a href="resources.html" class="flex-1 px-10 py-6 bg-white text-blue-700 font-semibold text-lg rounded-3xl hover:bg-amber-50 hover:text-blue-800 transition-all active:scale-95 shadow-md flex items-center justify-center gap-3">
-          📚<br>溫習資源
-        </a>
-        <a href="timetable.html" class="flex-1 px-10 py-6 bg-white text-blue-700 font-semibold text-lg rounded-3xl hover:bg-amber-50 hover:text-blue-800 transition-all active:scale-95 shadow-md flex items-center justify-center gap-3">
-          📅<br>考試時間表
-        </a>
-        <a href="countdown.html" class="flex-1 px-10 py-6 bg-white text-blue-700 font-semibold text-lg rounded-3xl hover:bg-amber-50 hover:text-blue-800 transition-all active:scale-95 shadow-md flex items-center justify-center gap-3">
-          ⏳<br>DSE倒數
-        </a>
+        <div class="pt-2">
+          <a href="resources.html" class="inline-flex items-center gap-1.5 px-4 py-2 bg-slate-900 text-white font-medium text-xs rounded hover:bg-slate-800 transition">
+            <span>開始檢索資源</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+
+        <hr class="border-slate-100 my-6">
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-slate-50 border border-slate-200/60 p-3.5 rounded">
+            <span class="block text-lg font-bold text-slate-950 tracking-tight">Free</span>
+            <span class="block text-[10px] uppercase tracking-wider text-slate-400 font-medium mt-0.5">內容定價</span>
+          </div>
+          <div class="bg-slate-50 border border-slate-200/60 p-3.5 rounded">
+            <span class="block text-lg font-bold text-slate-950 tracking-tight">2027</span>
+            <span class="block text-[10px] uppercase tracking-wider text-slate-400 font-medium mt-0.5">考評對應</span>
+          </div>
+        </div>
       </div>
 
-      <p class="mt-16 text-xs opacity-75">
-        全部內容只供個人溫習用途<br>
-        官方試題請到 HKEAA 官網搵
-      </p>
+      <div class="lg:col-span-8 space-y-8">
+        
+        <div>
+          <div class="flex items-center justify-between border-b border-slate-200 pb-2 mb-4">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">主要導航目錄 / Directory</h3>
+            <span class="text-[10px] font-medium text-slate-400">共 3 個板塊</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <a href="resources.html" class="group block p-4 bg-white border border-slate-200 rounded hover:border-slate-950 transition duration-150">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-slate-950 group-hover:underline">溫習資源庫</span>
+                <span class="text-[10px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded font-medium">Resources</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1.5 leading-normal">提供各核心科目與熱門選修科目的精簡筆記、重點精華及溫習指南下載。</p>
+            </a>
+
+            <a href="timetable.html" class="group block p-4 bg-white border border-slate-200 rounded hover:border-slate-950 transition duration-150">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-slate-950 group-hover:underline">HKDSE 考試時間表</span>
+                <span class="text-[10px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded font-medium">Schedule</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1.5 leading-normal">整合考評局發佈的核心與選修科目最新考期、時間安排及應試日程表。</p>
+            </a>
+
+            <a href="countdown.html" class="group block p-4 bg-white border border-slate-200 rounded hover:border-slate-950 transition duration-150 sm:col-span-2">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-slate-950 group-hover:underline">DSE 倒數計時器</span>
+                <span class="text-[10px] bg-indigo-50 text-indigo-600 px-1.5 py-0.5 rounded font-medium">Countdown</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1.5 leading-normal">即時追蹤距離各科開考的剩餘天數，助你精確規劃最後衝刺階段的複習進度。</p>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between border-b border-slate-200 pb-2 mb-4">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">平台收錄方向 / Content Framework</h3>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="p-4 bg-slate-50/50 border border-slate-200/80 rounded">
+              <span class="inline-block text-[10px] font-bold uppercase tracking-wider text-blue-600 mb-1">Structure</span>
+              <h4 class="text-xs font-bold text-slate-950 mb-1.5">結構化清晰筆記</h4>
+              <p class="text-[11px] text-slate-400 leading-relaxed">剔除多餘贅述，以條列式框架與清晰邏輯重整學科核心考點。</p>
+            </div>
+
+            <div class="p-4 bg-slate-50/50 border border-slate-200/80 rounded">
+              <span class="inline-block text-[10px] font-bold uppercase tracking-wider text-amber-600 mb-1">Strategy</span>
+              <h4 class="text-xs font-bold text-slate-950 mb-1.5">高效溫習指引</h4>
+              <p class="text-[11px] text-slate-400 leading-relaxed">提供考評局常設題型的切入路徑與階段性複習時間線建議。</p>
+            </div>
+
+            <div class="p-4 bg-slate-50/50 border border-slate-200/80 rounded">
+              <span class="inline-block text-[10px] font-bold uppercase tracking-wider text-emerald-600 mb-1">Insights</span>
+              <h4 class="text-xs font-bold text-slate-950 mb-1.5">常犯錯誤分析</h4>
+              <p class="text-[11px] text-slate-400 leading-relaxed">對準考評局評分標準（Marking Schemes），羅列歷屆常規失分陷阱。</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
-  </section>
+  </main>
 
-  <!-- Intro Cards -->
-  <section class="max-w-6xl mx-auto px-6 py-20">
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white p-8 rounded-3xl border border-zinc-100 hover:border-zinc-200 transition-all">
-        <div class="text-4xl mb-6">📝</div>
-        <h3 class="text-xl font-medium mb-3">清楚筆記</h3>
-        <p class="text-zinc-600">將複雜概念用簡單說話總結，易明易記。</p>
+  <footer class="bg-white border-t border-slate-200 mt-16 py-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8 text-slate-400 text-[11px] leading-relaxed">
+      <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
+        <div>
+          <p class="font-medium text-slate-600">© 2027 HK WanZaap Station — 專為香港學生而設的自主學習筆記平台</p>
+          <p class="mt-0.5">聲明：本站資源僅供個人溫習與學術交流用途。歷屆試題與官方答案請直接向香港考評局購買。</p>
+        </div>
+        <div class="flex gap-4">
+          <a href="https://www.hkeaa.edu.hk/" target="_blank" class="hover:text-slate-600 underline">HKEAA 考評局</a>
+        </div>
       </div>
-      <div class="bg-white p-8 rounded-3xl border border-zinc-100 hover:border-zinc-200 transition-all">
-        <div class="text-4xl mb-6">🧭</div>
-        <h3 class="text-xl font-medium mb-3">溫習指引</h3>
-        <p class="text-zinc-600">教你點樣有系統咁溫書，少走冤枉路。</p>
-      </div>
-      <div class="bg-white p-8 rounded-3xl border border-zinc-100 hover:border-zinc-200 transition-all">
-        <div class="text-4xl mb-6">💡</div>
-        <h3 class="text-xl font-medium mb-3">實用Tips</h3>
-        <p class="text-zinc-600">過來人分享嘅小技巧同常犯錯誤。</p>
-      </div>
-    </div>
-  </section>
-
-  <footer class="bg-zinc-900 text-zinc-400 py-14">
-    <div class="max-w-6xl mx-auto px-6 text-center text-sm">
-      <p class="mb-3">© 2026 HK WanZaap Station – 由學生為學生而做</p>
-      <p class="text-xs opacity-75">
-        呢個網站所有內容只係用嚟幫助大家學習同溫習。<br>
-        官方過去試題請到 <a href="https://www.hkeaa.edu.hk/" target="_blank" class="underline hover:text-white">HKEAA 官網</a> 攞取。
-      </p>
     </div>
   </footer>
+
+  <script>
+    (function(){
+      const btn = document.getElementById('nav-toggle');
+      const links = document.getElementById('nav-links');
+      if(!btn || !links) return;
+      btn.addEventListener('click', ()=>{
+        const hidden = links.classList.contains('hidden');
+        if(hidden){
+          links.classList.remove('hidden');
+          links.classList.add('flex');
+        } else {
+          links.classList.add('hidden');
+          links.classList.remove('flex');
+        }
+      });
+    })();
+  </script>
 
 </body>
 </html>

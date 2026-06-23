@@ -3,102 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>English Language - HK WanZaap Station</title>
+  <title>English Language | HK WanZaap Station</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght=400;500;600;700&family=Noto+Sans+TC:wght=400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body { 
+      font-family: 'Inter', 'Noto Sans TC', sans-serif; 
+      letter-spacing: -0.01em;
+    }
+  </style>
 </head>
-<body class="bg-zinc-50 text-zinc-800">
+<body class="bg-white text-slate-900 antialiased">
 
-  <!-- Navigation Bar -->
-  <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-9 h-9 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-2xl">📖</div>
-        <div>
-          <h1 class="text-2xl font-semibold tracking-tight">HK WanZaap Station</h1>
-          <p class="text-xs text-zinc-500 -mt-1">香港學生溫習小站</p>
+  <div class="bg-slate-50 border-b border-slate-200 text-center py-2 px-4 text-xs font-medium text-slate-600">
+    2027 HKDSE 備考專區：核心科目及選修科資源已同步更新。
+  </div>
+
+  <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-7 h-7 bg-slate-900 text-white rounded flex items-center justify-center font-bold text-xs">
+          WZ
         </div>
+        <div class="flex items-baseline gap-2">
+          <span class="text-base font-bold tracking-tight text-slate-950">HK WanZaap Station</span>
+          <span class="hidden sm:inline text-xs text-slate-400 font-medium border-l border-slate-200 pl-2">香港學生溫習資源</span>
+        </div>
+      </a>
+      
+      <div class="hidden md:flex items-center gap-6 text-xs font-medium text-slate-500">
+        <a href="index.html" class="hover:text-slate-950 py-1 transition">主頁</a>
+        <a href="resources.html" class="text-slate-950 font-semibold border-b-2 border-slate-950 py-1">溫習資源</a>
+        <a href="timetable.html" class="hover:text-slate-950 py-1 transition">考試時間表</a>
+        <a href="countdown.html" class="hover:text-slate-950 py-1 transition">DSE 倒數</a>
       </div>
-      <div class="flex gap-2 text-sm">
-        <a href="index.html" class="px-5 py-2.5 font-medium rounded-2xl hover:bg-zinc-100 transition">主頁</a>
-        <a href="resources.html" class="px-5 py-2.5 font-medium rounded-2xl hover:bg-zinc-100 transition">📚 溫習資源</a>
-        <a href="english.html" class="px-5 py-2.5 bg-blue-100 text-blue-700 font-semibold rounded-2xl">English Language</a>
-      </div>
+
+      <button id="nav-toggle" class="md:hidden p-1.5 rounded text-slate-600 border border-slate-200" aria-label="Toggle Navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+
+    <div id="nav-links" class="hidden border-t border-slate-200 bg-slate-50 px-4 py-2 flex-col gap-1 md:hidden text-xs font-medium">
+      <a href="index.html" class="px-3 py-2 text-slate-600 hover:text-slate-950">主頁</a>
+      <a href="resources.html" class="px-3 py-2 text-slate-950 bg-slate-200/50 rounded">溫習資源</a>
+      <a href="timetable.html" class="px-3 py-2 text-slate-600 hover:text-slate-950">考試時間表</a>
+      <a href="countdown.html" class="px-3 py-2 text-slate-600 hover:text-slate-950">DSE 倒數</a>
     </div>
   </nav>
 
-  <div class="max-w-5xl mx-auto px-6 py-16">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-semibold mb-3">English Language 英國語文</h2>
-      <p class="text-zinc-600">Core Subject • 核心科目</p>
+  <main class="max-w-5xl mx-auto px-4 sm:px-8 py-12">
+    
+    <div class="space-y-3 border-b border-slate-200 pb-6 mb-10">
+      <div class="flex items-center gap-2 text-xs font-medium text-slate-400">
+        <a href="index.html" class="hover:text-slate-600 transition">Home</a>
+        <span>/</span>
+        <a href="resources.html" class="hover:text-slate-600 transition">Resources</a>
+        <span>/</span>
+        <span class="text-slate-600">English Language</span>
+      </div>
+      
+      <div class="border-l-2 border-slate-900 pl-4 py-0.5">
+        <h2 class="text-xl font-bold tracking-tight text-slate-950">English Language</h2>
+        <p class="text-xs text-slate-400">Core Subject — Comprehensive HKDSE Revision Modules</p>
+      </div>
     </div>
 
-    <p class="max-w-2xl mx-auto text-center text-zinc-600 mb-12">
-      以下係English Language各卷嘅溫習資源同重點總結。<br>
-      點擊以下試卷入去睇更多材料。
-    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <div class="group border border-slate-200 bg-white rounded-xl p-6 hover:border-slate-400 hover:shadow-sm transition flex flex-col justify-between">
+        <div class="space-y-3">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-950 text-white rounded text-[10px] font-bold tracking-wide uppercase">Paper 1</span>
+            <h3 class="text-xs font-bold text-slate-500 uppercase tracking-wider">Reading</h3>
+          </div>
+          <h4 class="text-sm font-bold text-slate-950 group-hover:text-slate-800 transition">Reading Comprehension & Question Types</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed">Essential strategies for Part A (Compulsory) and Part B1/B2. Deep dive into high-frequency vocabulary, structural text analysis, and inference question templates.</p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+          <span class="text-xs font-medium text-slate-400 inline-flex items-center gap-1">
+            Under Maintenance
+          </span>
+        </div>
+      </div>
 
-    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-
-      <!-- Paper 1 -->
-      <a href="english-paper1.html" 
-         class="block bg-white border-2 border-blue-100 hover:border-blue-600 rounded-3xl p-10 transition-all hover:shadow-md group">
-        <div class="text-5xl mb-6">📖</div>
-        <h3 class="text-2xl font-semibold mb-2 group-hover:text-blue-600">Paper 1 Reading</h3>
-        <p class="text-zinc-600">閱讀能力 • 1.5小時 • 20%</p>
-        <p class="mt-4 text-sm text-blue-600 hover:underline inline-flex items-center gap-1">
-          入去睇卷一資源 →
-        </p>
+      <a href="english-paper2.html" class="group border border-slate-200 bg-white rounded-xl p-6 hover:border-slate-400 hover:shadow-sm transition flex flex-col justify-between">
+        <div class="space-y-3">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-950 text-white rounded text-[10px] font-bold tracking-wide uppercase">Paper 2</span>
+            <h3 class="text-xs font-bold text-slate-500 uppercase tracking-wider">Writing</h3>
+          </div>
+          <h4 class="text-sm font-bold text-slate-950 group-hover:text-slate-800 transition">Writing Formats, Vocabulary & Electives</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed">Advanced vocabulary banks, professional transitions, and structural dynamic frameworks for formal columns, articles, letters, and various professional genres.</p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+          <span class="text-xs font-medium text-slate-900 group-hover:text-slate-600 transition">Access Module Notes</span>
+          <span class="text-xs text-slate-400 transform group-hover:translate-x-1 transition-transform">→</span>
+        </div>
       </a>
 
-      <!-- Paper 2 -->
-      <a href="english-paper2.html" 
-         class="block bg-white border-2 border-blue-100 hover:border-blue-600 rounded-3xl p-10 transition-all hover:shadow-md group">
-        <div class="text-5xl mb-6">✍️</div>
-        <h3 class="text-2xl font-semibold mb-2 group-hover:text-blue-600">Paper 2 Writing</h3>
-        <p class="text-zinc-600">寫作能力 • 2小時 • 25%</p>
-        <p class="mt-4 text-sm text-blue-600 hover:underline inline-flex items-center gap-1">
-          入去睇卷二資源 →
-        </p>
-      </a>
+      <div class="group border border-slate-200 bg-white rounded-xl p-6 hover:border-slate-400 hover:shadow-sm transition flex flex-col justify-between">
+        <div class="space-y-3">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-100 border border-slate-200 text-slate-500 rounded text-[10px] font-bold tracking-wide uppercase">Paper 3</span>
+            <h3 class="text-xs font-bold text-slate-500 uppercase tracking-wider">Listening & Integrated Skills</h3>
+          </div>
+          <h4 class="text-sm font-bold text-slate-950">Data File Analysis & Format Guides</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed">Frameworks for formal emails, reports, and proposals. Key tactics for efficiently cross-referencing information notes and data sheets under time constraints.</p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+          <span class="text-xs font-medium text-slate-400 inline-flex items-center gap-1">
+            Under Maintenance
+          </span>
+        </div>
+      </div>
 
-      <!-- Paper 3 -->
-      <a href="english-paper3.html" 
-         class="block bg-white border-2 border-blue-100 hover:border-blue-600 rounded-3xl p-10 transition-all hover:shadow-md group">
-        <div class="text-5xl mb-6">🎧</div>
-        <h3 class="text-2xl font-semibold mb-2 group-hover:text-blue-600">Paper 3 Listening & Integrated Skills</h3>
-        <p class="text-zinc-600">聆聽及綜合能力 • 約2小時 • 30%</p>
-        <p class="mt-4 text-sm text-blue-600 hover:underline inline-flex items-center gap-1">
-          入去睇卷三資源 →
-        </p>
-      </a>
-
-      <!-- Paper 4 -->
-      <a href="english-paper4.html" 
-         class="block bg-white border-2 border-blue-100 hover:border-blue-600 rounded-3xl p-10 transition-all hover:shadow-md group">
-        <div class="text-5xl mb-6">🗣️</div>
-        <h3 class="text-2xl font-semibold mb-2 group-hover:text-blue-600">Paper 4 Speaking</h3>
-        <p class="text-zinc-600">說話能力 • 約20分鐘 • 10%</p>
-        <p class="mt-4 text-sm text-blue-600 hover:underline inline-flex items-center gap-1">
-          入去睇卷四資源 →
-        </p>
-      </a>
+      <div class="group border border-slate-200 bg-white rounded-xl p-6 hover:border-slate-400 hover:shadow-sm transition flex flex-col justify-between">
+        <div class="space-y-3">
+          <div class="flex items-center gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-100 border border-slate-200 text-slate-500 rounded text-[10px] font-bold tracking-wide uppercase">Paper 4</span>
+            <h3 class="text-xs font-bold text-slate-500 uppercase tracking-wider">Speaking</h3>
+          </div>
+          <h4 class="text-sm font-bold text-slate-950">Group Interaction & Communication Phrases</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed">Natural phrases for academic discussion, polite interruption, elaboration, and synthesis. Strategies to navigate complex group dynamics seamlessly.</p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+          <span class="text-xs font-medium text-slate-400 inline-flex items-center gap-1">
+            Under Maintenance
+          </span>
+        </div>
+      </div>
 
     </div>
 
-    <!-- Disclaimer -->
-    <div class="mt-20 text-center text-xs text-zinc-500 max-w-2xl mx-auto">
-      <p>以上只係各卷溫習指引同重點總結，全部內容只供個人學習用途。</p>
-      <p class="mt-3">我們不會提供或上載任何官方考試試卷、完整過去試題或評卷參考。</p>
-      <p class="mt-4">
-        官方過去試題、樣本試卷及考生表現示例，請到 
-        <a href="https://www.hkeaa.edu.hk/" target="_blank" class="underline text-blue-600 hover:text-blue-700">HKEAA 官網</a> 查閱或購買。
-      </p>
+    <div class="mt-16 bg-slate-50 border border-slate-200/60 rounded-xl p-5 text-center text-xs text-slate-400 leading-relaxed">
+      <p>All structured materials and guides are intended solely for academic review and personal reference. We strictly do not host copyrighted HKEAA examination scripts.</p>
     </div>
-  </div>
 
-  <footer class="bg-zinc-900 text-zinc-400 py-12 text-sm text-center">
-    © 2026 HK WanZaap Station – 由學生為學生而做
+  </main>
+
+  <footer class="bg-white border-t border-slate-200 mt-16 py-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8 text-slate-400 text-[11px] leading-relaxed">
+      <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
+        <div>
+          <p class="font-medium text-slate-600">© 2027 HK WanZaap Station — 專為香港學生而設的自主學習筆記平台</p>
+          <p class="mt-0.5">聲明：本站資源僅供個人溫習與學術交流用途。歷屆試題與官方答案請直接向香港考評局購買。</p>
+        </div>
+        <div class="flex gap-4">
+          <a href="https://www.hkeaa.edu.hk/" target="_blank" class="hover:text-slate-600 underline">HKEAA 考評局</a>
+        </div>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    // 行動端導航欄 Toggle 邏輯
+    (function(){
+      const btn = document.getElementById('nav-toggle');
+      const links = document.getElementById('nav-links');
+      if(!btn || !links) return;
+      btn.addEventListener('click', ()=>{
+        if(links.classList.contains('hidden')){
+          links.classList.remove('hidden');
+          links.classList.add('flex');
+        } else {
+          links.classList.add('hidden');
+          links.classList.remove('flex');
+        }
+      });
+    })();
+  </script>
 
 </body>
 </html>

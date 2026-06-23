@@ -3,77 +3,267 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>考試時間表 - HK WanZaap Station</title>
+  <title>考試時間表 | HK WanZaap Station</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body { 
+      font-family: 'Inter', 'Noto Sans TC', sans-serif; 
+      letter-spacing: -0.01em;
+    }
+  </style>
 </head>
-<body class="bg-zinc-50 text-zinc-800">
+<body class="bg-white text-slate-900 antialiased">
 
-  <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-    <div class="flex items-center gap-3">
-      <div class="w-9 h-9 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-2xl leading-none pt-0.5">📖</div>
-      <div>
-        <h1 class="text-2xl font-semibold tracking-tight">HK WanZaap Station</h1>
-        <p class="text-xs text-zinc-500 -mt-1">香港學生溫習小站</p>
-      </div>
-    </div>
-    
-    <div class="flex gap-2">
-      <a href="index.html" class="px-5 py-2.5 text-sm font-medium rounded-2xl hover:bg-zinc-100 transition">主頁</a>
-      <a href="resources.html" class="px-5 py-2.5 text-sm font-medium rounded-2xl hover:bg-zinc-100 transition">📚 溫習資源</a>
-      <a href="timetable.html" class="px-5 py-2.5 bg-blue-100 text-blue-700 font-semibold rounded-2xl">📅 考試時間表</a>
-      <a href="countdown.html" class="px-5 py-2.5 text-sm font-medium rounded-2xl hover:bg-zinc-100 transition">⏳ DSE倒數</a>
-    </div>
+  <div class="bg-slate-50 border-b border-slate-200 text-center py-2 px-4 text-xs font-medium text-slate-600">
+    2027 HKDSE 備考專區：核心科目及選修科資源已同步更新。
   </div>
-</nav>
 
-  <div class="max-w-4xl mx-auto px-6 py-12">
-    <h2 class="text-4xl font-semibold mb-8 text-center">2027 HKDSE 考試時間表</h2>
-    
-    <div class="bg-white rounded-3xl shadow-sm border p-6">
-      <p class="text-center text-zinc-600 mb-6">以下為 2027 年 DSE 主要科目之時間表，並附上即時倒數</p>
-
-      <div class="overflow-x-auto">
-        <table class="min-w-full text-sm text-left">
-          <thead>
-            <tr class="bg-zinc-50">
-              <th class="px-4 py-3 border">日期</th>
-              <th class="px-4 py-3 border">時間</th>
-              <th class="px-4 py-3 border">科目 / 範圍</th>
-              <th class="px-4 py-3 border">倒數</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y">
-            <tr data-target="2027-04-06T08:30:00"><td class="px-4 py-3 border">2027-04-06（週二）</td><td class="px-4 py-3 border">08:30</td><td class="px-4 py-3 border">視覺藝術（一）及（二）</td><td class="px-4 py-3 border font-semibold text-blue-600 countdown"></td></tr>
-            <tr data-target="2027-04-07T08:30:00"><td class="px-4 py-3 border">2027-04-07（週三）</td><td class="px-4 py-3 border">08:30</td><td class="px-4 py-3 border">中國文學／科技與生活*</td><td class="px-4 py-3 border font-semibold text-blue-600 countdown"></td></tr>
-            <tr data-target="2027-04-08T08:30:00"><td class="px-4 py-3 border">2027-04-08（週四）</td><td class="px-4 py-3 border">08:30</td><td class="px-4 py-3 border">中國語文（一）及（二）</td><td class="px-4 py-3 border font-semibold text-blue-600 countdown"></td></tr>
-            <tr data-target="2027-04-09T08:30:00"><td class="px-4 py-3 border">2027-04-09（週五）</td><td class="px-4 py-3 border">08:30</td><td class="px-4 py-3 border">英國語文（一）及（二）</td><td class="px-4 py-3 border font-semibold text-blue-600 countdown"></td></tr>
-            <tr data-target="2027-04-10T09:15:00"><td class="px-4 py-3 border">2027-04-10（週六）</td><td class="px-4 py-3 border">09:15</td><td class="px-4 py-3 border">英國語文（三）（聆聽）</td><td class="px-4 py-3 border font-semibold text-blue-600 countdown"></td></tr>
-            <tr data-target="2027-04-12T08:30:00"><td class="px-4 py-3 border">2027-04-12（週一）</td><td class="px-4 py-3 border">08:30</td><td class="px-4 py-3 border">數學必修部分（一）及（二）</td><td class="px-4 py-3 border font-semibold text-blue-600 countdown"></td></tr>
-            <tr data-target="2027-04-13T08:30:00"><td class="px-4 py-3 border">2027-04-13（週二）</td><td class="px-4 py-3 border">08:30</td><td class="px-4 py-3 border">公民與社會發展</td><td class="px-4 py-3 border font-semibold text-blue-600 countdown"></td></tr>
-            <tr data-target="2027-04-14T08:30:00"><td class="px-4 py-3 border">2027-04-14（週三）</td><td class="px-4 py-3 border">08:30</td><td class="px-4 py-3 border">健康管理與社會關懷（一）及（二）</td><td class="px-4 py-3 border font-semibold text-blue-600 countdown"></td></tr>
-            <tr data-target="2027-04-15T08:30:00"><td class="px-4 py-3 border">2027-04-15（週四）</td><td class="px-4 py-3 border">08:30</td><td class="px-4 py-3 border">化學（一）及（二）</td><td class="px-4 py-3 border font-semibold text-blue-600 countdown"></td></tr>
-            <tr data-target="2027-04-16T08:30:00"><td class="px-4 py-3 border">2027-04-16（週五）</td><td class="px-4 py-3 border">08:30</td><td class="px-4 py-3 border">地理（一）及（二）</td><td class="px-4 py-3 border font-semibold text-blue-600 countdown"></td></tr>
-            <tr data-target="2027-04-17T08:30:00"><td class="px-4 py-3 border">2027-04-17（週六）</td><td class="px-4 py-3 border">08:30</td><td class="px-4 py-3 border">資訊及通訊科技（一）及（二）</td><td class="px-4 py-3 border font-semibold text-blue-600 countdown"></td></tr>
-            <tr data-target="2027-04-19T08:30:00"><td class="px-4 py-3 border">2027-04-19（週一）</td><td class="px-4 py-3 border">08:30</td><td class="px-4 py-3 border">生物（一）及（二）</td><td class="px-4 py-3 border font-semibold text-blue-600 countdown"></td></tr>
-            <tr data-target="2027-04-20T08:30:00"><td class="px-4 py-3 border">2027-04-20（週二）</td><td class="px-4 py-3 border">08:30</td><td class="px-4 py-3 border">設計與應用科技／英語文學*</td><td class="px-4 py-3 border font-semibold text-blue-600 countdown"></td></tr>
-            <tr data-target="2027-04-21T08:30:00"><td class="px-4 py-3 border">2027-04-21（週三）</td><td class="px-4 py-3 border">08:30</td><td class="px-4 py-3 border">物理（一）及（二）</td><td class="px-4 py-3 border font-semibold text-blue-600 countdown"></td></tr>
-            <tr data-target="2027-04-22T08:30:00"><td class="px-4 py-3 border">2027-04-22（週四）</td><td class="px-4 py-3 border">08:30</td><td class="px-4 py-3 border">經濟（一）及（二）</td><td class="px-4 py-3 border font-semibold text-blue-600 countdown"></td></tr>
-            <tr data-target="2027-04-23T08:30:00"><td class="px-4 py-3 border">2027-04-23（週五）</td><td class="px-4 py-3 border">08:30</td><td class="px-4 py-3 border">數學延伸部分單元（一）及（二）</td><td class="px-4 py-3 border font-semibold text-blue-600 countdown"></td></tr>
-            <tr data-target="2027-04-24T08:30:00"><td class="px-4 py-3 border">2027-04-24（週六）</td><td class="px-4 py-3 border">08:30</td><td class="px-4 py-3 border">中國歷史（一）及（二）</td><td class="px-4 py-3 border font-semibold text-blue-600 countdown"></td></tr>
-            <tr data-target="2027-04-26T08:30:00"><td class="px-4 py-3 border">2027-04-26（週一）</td><td class="px-4 py-3 border">08:30</td><td class="px-4 py-3 border">企業、會計與財務概論（一）及（二）</td><td class="px-4 py-3 border font-semibold text-blue-600 countdown"></td></tr>
-            <tr data-target="2027-04-27T08:30:00"><td class="px-4 py-3 border">2027-04-27（週二）</td><td class="px-4 py-3 border">08:30</td><td class="px-4 py-3 border">歷史（一）及（二）</td><td class="px-4 py-3 border font-semibold text-blue-600 countdown"></td></tr>
-            <tr data-target="2027-04-28T08:30:00"><td class="px-4 py-3 border">2027-04-28（週三）</td><td class="px-4 py-3 border">08:30</td><td class="px-4 py-3 border">旅遊與款待（一）及（二）</td><td class="px-4 py-3 border font-semibold text-blue-600 countdown"></td></tr>
-            <tr data-target="2027-04-29T08:30:00"><td class="px-4 py-3 border">2027-04-29（週四）</td><td class="px-4 py-3 border">08:30</td><td class="px-4 py-3 border">英語文學*／科技與生活*／體育*／音樂*</td><td class="px-4 py-3 border font-semibold text-blue-600 countdown"></td></tr>
-            <tr data-target="2027-04-30T08:30:00"><td class="px-4 py-3 border">2027-04-30（週五）</td><td class="px-4 py-3 border">08:30</td><td class="px-4 py-3 border">倫理與宗教（一）及（二）</td><td class="px-4 py-3 border font-semibold text-blue-600 countdown"></td></tr>
-            <tr data-target="2027-05-03T08:30:00"><td class="px-4 py-3 border">2027-05-03（週一）</td><td class="px-4 py-3 border">08:30</td><td class="px-4 py-3 border">英語文學*／科技與生活*／體育*／音樂*（補場）</td><td class="px-4 py-3 border font-semibold text-blue-600 countdown"></td></tr>
-          </tbody>
-        </table>
+  <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-7 h-7 bg-slate-900 text-white rounded flex items-center justify-center font-bold text-xs">
+          WZ
+        </div>
+        <div class="flex items-baseline gap-2">
+          <span class="text-base font-bold tracking-tight text-slate-950">HK WanZaap Station</span>
+          <span class="hidden sm:inline text-xs text-slate-400 font-medium border-l border-slate-200 pl-2">香港學生溫習資源</span>
+        </div>
+      </a>
+      
+      <div class="hidden md:flex items-center gap-6 text-xs font-medium text-slate-500">
+        <a href="index.html" class="hover:text-slate-950 py-1 transition">主頁</a>
+        <a href="resources.html" class="hover:text-slate-950 py-1 transition">溫習資源</a>
+        <a href="timetable.html" class="text-slate-950 font-semibold border-b-2 border-slate-950 py-1">考試時間表</a>
+        <a href="countdown.html" class="hover:text-slate-950 py-1 transition">DSE 倒數</a>
       </div>
 
-      <p class="text-xs text-zinc-500 mt-4">* 部分科目（例如實習或口試）會在報考後安排實際日期或時間</p>
+      <button id="nav-toggle" class="md:hidden p-1.5 rounded text-slate-600 border border-slate-200" aria-label="Toggle Navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
     </div>
-  </div>
+
+    <div id="nav-links" class="hidden border-t border-slate-200 bg-slate-50 px-4 py-2 flex-col gap-1 md:hidden text-xs font-medium">
+      <a href="index.html" class="px-3 py-2 text-slate-600 hover:text-slate-950">主頁</a>
+      <a href="resources.html" class="px-3 py-2 text-slate-600 hover:text-slate-950">溫習資源</a>
+      <a href="timetable.html" class="px-3 py-2 text-slate-950 bg-slate-200/50 rounded">考試時間表</a>
+      <a href="countdown.html" class="px-3 py-2 text-slate-600 hover:text-slate-950">DSE 倒數</a>
+    </div>
+  </nav>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-8 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+      
+      <div class="lg:col-span-4 space-y-6">
+        <div class="border-l-2 border-slate-900 pl-4 py-1">
+          <h2 class="text-xl font-bold tracking-tight text-slate-950">2027 HKDSE</h2>
+          <p class="text-xs text-slate-400 mt-0.5">考試時間表 • 主要科目日程</p>
+        </div>
+        
+        <p class="text-xs text-slate-500 leading-relaxed max-w-sm">
+          以下為 2027 年 DSE 主要科目之時間表，已整合考評局最新發佈的核心與選修科目考期，並附上各科開考的即時精密倒數。
+        </p>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-slate-50 border border-slate-200/60 p-3.5 rounded">
+            <span class="block text-xs font-bold text-slate-950 tracking-tight">Core / Electives</span>
+            <span class="block text-[10px] text-slate-400 font-medium mt-1">主要學科全收錄</span>
+          </div>
+          <div class="bg-slate-50 border border-slate-200/60 p-3.5 rounded">
+            <span class="block text-xs font-bold text-slate-950 tracking-tight">Real-time</span>
+            <span class="block text-[10px] text-slate-400 font-medium mt-1">精確固定倒數</span>
+          </div>
+        </div>
+
+        <div class="p-4 bg-amber-50/60 border border-amber-200 rounded">
+          <span class="inline-block text-[10px] font-bold uppercase tracking-wider text-amber-700 mb-1">⚠️ 應試備忘</span>
+          <h4 class="text-xs font-bold text-slate-950 mb-1">部分科目安排</h4>
+          <p class="text-[11px] text-slate-500 leading-relaxed">
+            帶有 * 號之部分科目（例如實習或口試）會在報考後安排實際日期或時間，請密切留意考評局最終發佈之准考證為準。
+          </p>
+        </div>
+      </div>
+
+      <div class="lg:col-span-8">
+        <div class="flex items-center justify-between border-b border-slate-200 pb-2 mb-6">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">主要科目日程表 / Examination Schedule</h3>
+          <span class="text-[10px] font-medium text-slate-400">實時更新</span>
+        </div>
+
+        <div class="border border-slate-200 rounded overflow-hidden shadow-sm bg-white">
+          <div class="overflow-x-auto">
+            <table class="min-w-full text-xs text-left text-slate-600">
+              <thead>
+                <tr class="bg-slate-50 text-slate-700 font-semibold border-b border-slate-200">
+                  <th class="px-4 py-3">日期</th>
+                  <th class="px-4 py-3">時間</th>
+                  <th class="px-4 py-3">科目 / 範圍</th>
+                  <th class="px-4 py-3 text-right">距離開考倒數</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100">
+                <tr class="hover:bg-slate-50/50 transition" data-target="2027-04-06T08:30:00">
+                  <td class="px-4 py-3 font-medium text-slate-900">2027-04-06（週二）</td>
+                  <td class="px-4 py-3">08:30</td>
+                  <td class="px-4 py-3">視覺藝術（一）及（二）</td>
+                  <td class="px-4 py-3 text-right font-semibold text-slate-950"><span class="countdown font-mono inline-block text-left min-w-[130px] tabular-nums"></span></td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition" data-target="2027-04-07T08:30:00">
+                  <td class="px-4 py-3 font-medium text-slate-900">2027-04-07（週三）</td>
+                  <td class="px-4 py-3">08:30</td>
+                  <td class="px-4 py-3">中國文學／科技與生活*</td>
+                  <td class="px-4 py-3 text-right font-semibold text-slate-950"><span class="countdown font-mono inline-block text-left min-w-[130px] tabular-nums"></span></td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition" data-target="2027-04-08T08:30:00">
+                  <td class="px-4 py-3 font-medium text-slate-900">2027-04-08（週四）</td>
+                  <td class="px-4 py-3">08:30</td>
+                  <td class="px-4 py-3">中國語文（一）及（二）</td>
+                  <td class="px-4 py-3 text-right font-semibold text-slate-950"><span class="countdown font-mono inline-block text-left min-w-[130px] tabular-nums"></span></td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition" data-target="2027-04-09T08:30:00">
+                  <td class="px-4 py-3 font-medium text-slate-900">2027-04-09（週五）</td>
+                  <td class="px-4 py-3">08:30</td>
+                  <td class="px-4 py-3">英國語文（一）及（二）</td>
+                  <td class="px-4 py-3 text-right font-semibold text-slate-950"><span class="countdown font-mono inline-block text-left min-w-[130px] tabular-nums"></span></td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition" data-target="2027-04-10T09:15:00">
+                  <td class="px-4 py-3 font-medium text-slate-900">2027-04-10（週六）</td>
+                  <td class="px-4 py-3">09:15</td>
+                  <td class="px-4 py-3">英國語文（三）（聆聽）</td>
+                  <td class="px-4 py-3 text-right font-semibold text-slate-950"><span class="countdown font-mono inline-block text-left min-w-[130px] tabular-nums"></span></td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition" data-target="2027-04-12T08:30:00">
+                  <td class="px-4 py-3 font-medium text-slate-900">2027-04-12（週一）</td>
+                  <td class="px-4 py-3">08:30</td>
+                  <td class="px-4 py-3">數學必修部分（一）及（二）</td>
+                  <td class="px-4 py-3 text-right font-semibold text-slate-950"><span class="countdown font-mono inline-block text-left min-w-[130px] tabular-nums"></span></td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition" data-target="2027-04-13T08:30:00">
+                  <td class="px-4 py-3 font-medium text-slate-900">2027-04-13（週二）</td>
+                  <td class="px-4 py-3">08:30</td>
+                  <td class="px-4 py-3">公民與社會發展</td>
+                  <td class="px-4 py-3 text-right font-semibold text-slate-950"><span class="countdown font-mono inline-block text-left min-w-[130px] tabular-nums"></span></td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition" data-target="2027-04-14T08:30:00">
+                  <td class="px-4 py-3 font-medium text-slate-900">2027-04-14（週三）</td>
+                  <td class="px-4 py-3">08:30</td>
+                  <td class="px-4 py-3">健康管理與社會關懷（一）及（二）</td>
+                  <td class="px-4 py-3 text-right font-semibold text-slate-950"><span class="countdown font-mono inline-block text-left min-w-[130px] tabular-nums"></span></td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition" data-target="2027-04-15T08:30:00">
+                  <td class="px-4 py-3 font-medium text-slate-900">2027-04-15（週四）</td>
+                  <td class="px-4 py-3">08:30</td>
+                  <td class="px-4 py-3">化學（一）及（二）</td>
+                  <td class="px-4 py-3 text-right font-semibold text-slate-950"><span class="countdown font-mono inline-block text-left min-w-[130px] tabular-nums"></span></td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition" data-target="2027-04-16T08:30:00">
+                  <td class="px-4 py-3 font-medium text-slate-900">2027-04-16（週五）</td>
+                  <td class="px-4 py-3">08:30</td>
+                  <td class="px-4 py-3">地理（一）及（二）</td>
+                  <td class="px-4 py-3 text-right font-semibold text-slate-950"><span class="countdown font-mono inline-block text-left min-w-[130px] tabular-nums"></span></td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition" data-target="2027-04-17T08:30:00">
+                  <td class="px-4 py-3 font-medium text-slate-900">2027-04-17（週六）</td>
+                  <td class="px-4 py-3">08:30</td>
+                  <td class="px-4 py-3">資訊及通訊科技（一）及（二）</td>
+                  <td class="px-4 py-3 text-right font-semibold text-slate-950"><span class="countdown font-mono inline-block text-left min-w-[130px] tabular-nums"></span></td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition" data-target="2027-04-19T08:30:00">
+                  <td class="px-4 py-3 font-medium text-slate-900">2027-04-19（週一）</td>
+                  <td class="px-4 py-3">08:30</td>
+                  <td class="px-4 py-3">生物（一）及（二）</td>
+                  <td class="px-4 py-3 text-right font-semibold text-slate-950"><span class="countdown font-mono inline-block text-left min-w-[130px] tabular-nums"></span></td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition" data-target="2027-04-20T08:30:00">
+                  <td class="px-4 py-3 font-medium text-slate-900">2027-04-20（週二）</td>
+                  <td class="px-4 py-3">08:30</td>
+                  <td class="px-4 py-3">設計與應用科技／英語文學*</td>
+                  <td class="px-4 py-3 text-right font-semibold text-slate-950"><span class="countdown font-mono inline-block text-left min-w-[130px] tabular-nums"></span></td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition" data-target="2027-04-21T08:30:00">
+                  <td class="px-4 py-3 font-medium text-slate-900">2027-04-21（週三）</td>
+                  <td class="px-4 py-3">08:30</td>
+                  <td class="px-4 py-3">物理（一）及（二）</td>
+                  <td class="px-4 py-3 text-right font-semibold text-slate-950"><span class="countdown font-mono inline-block text-left min-w-[130px] tabular-nums"></span></td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition" data-target="2027-04-22T08:30:00">
+                  <td class="px-4 py-3 font-medium text-slate-900">2027-04-22（週四）</td>
+                  <td class="px-4 py-3">08:30</td>
+                  <td class="px-4 py-3">經濟（一）及（二）</td>
+                  <td class="px-4 py-3 text-right font-semibold text-slate-950"><span class="countdown font-mono inline-block text-left min-w-[130px] tabular-nums"></span></td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition" data-target="2027-04-23T08:30:00">
+                  <td class="px-4 py-3 font-medium text-slate-900">2027-04-23（週五）</td>
+                  <td class="px-4 py-3">08:30</td>
+                  <td class="px-4 py-3">數學延伸部分單元（一）及（二）</td>
+                  <td class="px-4 py-3 text-right font-semibold text-slate-950"><span class="countdown font-mono inline-block text-left min-w-[130px] tabular-nums"></span></td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition" data-target="2027-04-24T08:30:00">
+                  <td class="px-4 py-3 font-medium text-slate-900">2027-04-24（週六）</td>
+                  <td class="px-4 py-3">08:30</td>
+                  <td class="px-4 py-3">中國歷史（一）及（二）</td>
+                  <td class="px-4 py-3 text-right font-semibold text-slate-950"><span class="countdown font-mono inline-block text-left min-w-[130px] tabular-nums"></span></td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition" data-target="2027-04-26T08:30:00">
+                  <td class="px-4 py-3 font-medium text-slate-900">2027-04-26（週一）</td>
+                  <td class="px-4 py-3">08:30</td>
+                  <td class="px-4 py-3">企業、會計與財務概論（一）及（二）</td>
+                  <td class="px-4 py-3 text-right font-semibold text-slate-950"><span class="countdown font-mono inline-block text-left min-w-[130px] tabular-nums"></span></td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition" data-target="2027-04-27T08:30:00">
+                  <td class="px-4 py-3 font-medium text-slate-900">2027-04-27（週二）</td>
+                  <td class="px-4 py-3">08:30</td>
+                  <td class="px-4 py-3">歷史（一）及（二）</td>
+                  <td class="px-4 py-3 text-right font-semibold text-slate-950"><span class="countdown font-mono inline-block text-left min-w-[130px] tabular-nums"></span></td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition" data-target="2027-04-28T08:30:00">
+                  <td class="px-4 py-3 font-medium text-slate-900">2027-04-28（週三）</td>
+                  <td class="px-4 py-3">08:30</td>
+                  <td class="px-4 py-3">旅遊與款待（一）及（二）</td>
+                  <td class="px-4 py-3 text-right font-semibold text-slate-950"><span class="countdown font-mono inline-block text-left min-w-[130px] tabular-nums"></span></td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition" data-target="2027-04-29T08:30:00">
+                  <td class="px-4 py-3 font-medium text-slate-900">2027-04-29（週四）</td>
+                  <td class="px-4 py-3">08:30</td>
+                  <td class="px-4 py-3">英語文學*／科技與生活*／體育*／音樂*</td>
+                  <td class="px-4 py-3 text-right font-semibold text-slate-950"><span class="countdown font-mono inline-block text-left min-w-[130px] tabular-nums"></span></td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition" data-target="2027-04-30T08:30:00">
+                  <td class="px-4 py-3 font-medium text-slate-900">2027-04-30（週五）</td>
+                  <td class="px-4 py-3">08:30</td>
+                  <td class="px-4 py-3">倫理與宗教（一）及（二）</td>
+                  <td class="px-4 py-3 text-right font-semibold text-slate-950"><span class="countdown font-mono inline-block text-left min-w-[130px] tabular-nums"></span></td>
+                </tr>
+                <tr class="hover:bg-slate-50/50 transition" data-target="2027-05-03T08:30:00">
+                  <td class="px-4 py-3 font-medium text-slate-900">2027-05-03（週一）</td>
+                  <td class="px-4 py-3">08:30</td>
+                  <td class="px-4 py-3">英語文學*／科技與生活*／體育*／音樂*（補場）</td>
+                  <td class="px-4 py-3 text-right font-semibold text-slate-950"><span class="countdown font-mono inline-block text-left min-w-[130px] tabular-nums"></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-white border-t border-slate-200 mt-16 py-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8 text-slate-400 text-[11px] leading-relaxed">
+      <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
+        <div>
+          <p class="font-medium text-slate-600">© 2027 HK WanZaap Station — 專為香港學生而設的自主學習筆記平台</p>
+          <p class="mt-0.5">聲明：本站資源僅供個人溫習與學術交流用途。歷屆試題與官方答案請直接向香港考評局購買。</p>
+        </div>
+        <div class="flex gap-4">
+          <a href="https://www.hkeaa.edu.hk/" target="_blank" class="hover:text-slate-600 underline">HKEAA 考評局</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script>
     function formatCountdown(targetDate) {
@@ -90,7 +280,12 @@
       const minutes = Math.floor((totalSeconds % 3600) / 60);
       const seconds = totalSeconds % 60;
 
-      return `${days} 日 ${hours} 時 ${minutes} 分 ${seconds} 秒`;
+      // 補零讓每行寬度等長
+      const hStr = hours < 10 ? '0' + hours : hours;
+      const mStr = minutes < 10 ? '0' + minutes : minutes;
+      const sStr = seconds < 10 ? '0' + seconds : seconds;
+
+      return `${days}日 ${hStr}時 ${mStr}分 ${sStr}秒`;
     }
 
     function updateCountdowns() {
@@ -105,12 +300,23 @@
 
     updateCountdowns();
     setInterval(updateCountdowns, 1000);
+
+    // 行動端導航欄
+    (function(){
+      const btn = document.getElementById('nav-toggle');
+      const links = document.getElementById('nav-links');
+      if(!btn || !links) return;
+      btn.addEventListener('click', ()=>{
+        if(links.classList.contains('hidden')){
+          links.classList.remove('hidden');
+          links.classList.add('flex');
+        } else {
+          links.classList.add('hidden');
+          links.classList.remove('flex');
+        }
+      });
+    })();
   </script>
 
-  <footer class="bg-zinc-900 text-zinc-400 py-10 text-sm">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <p>© 2026 HK WanZaap Station – 由學生為學生而做</p>
-    </div>
-  </footer>
 </body>
 </html>
