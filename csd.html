@@ -5,391 +5,422 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>公民與社會發展科 | HK WanZaap Station</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght=400;500;600;700&family=Noto+Sans+TC:wght=400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body { 
+      font-family: 'Inter', 'Noto Sans TC', sans-serif; 
+      letter-spacing: -0.01em;
+    }
+  </style>
 </head>
-<body class="bg-zinc-50 text-zinc-800">
+<body class="bg-white text-slate-900 antialiased">
 
- <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="w-9 h-9 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-2xl">📖</div>
-        <div>
-          <h1 class="text-2xl font-semibold tracking-tight">HK WanZaap Station</h1>
-          <p class="text-xs text-zinc-500 -mt-1">香港學生溫習小站</p>
+  <div class="bg-slate-50 border-b border-slate-200 text-center py-2 px-4 text-xs font-medium text-slate-600">
+    2027 HKDSE 備考專區：核心科目及選修科資源已同步更新。
+  </div>
+
+  <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-7 h-7 bg-slate-900 text-white rounded flex items-center justify-center font-bold text-xs">
+          WZ
         </div>
-      </div>
-      <div class="flex items-center gap-2 text-sm relative">
-        <button id="nav-toggle" class="md:hidden p-2 rounded-2xl bg-zinc-100 hover:bg-zinc-200" aria-label="打開選單" aria-expanded="false">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-        </button>
-        <div id="nav-links" class="hidden md:flex flex-col md:flex-row gap-2 absolute md:static top-full right-0 mt-3 md:mt-0 bg-white md:bg-transparent p-3 md:p-0 rounded-2xl md:rounded-none shadow-lg md:shadow-none border border-zinc-100 md:border-0 min-w-56 md:min-w-0 z-50">
-          <a href="index.html" class="px-5 py-2.5 font-medium rounded-2xl hover:bg-zinc-100 transition">主頁</a>
-          <a href="resources.html" class="px-5 py-2.5 font-medium rounded-2xl hover:bg-zinc-100 transition">📚 溫習資源</a>
-          <a href="csd.html" class="px-5 py-2.5 bg-emerald-100 text-emerald-700 font-semibold rounded-2xl">公民與社會發展科</a>
+        <div class="flex items-baseline gap-2">
+          <span class="text-base font-bold tracking-tight text-slate-950">HK WanZaap Station</span>
+          <span class="hidden sm:inline text-xs text-slate-400 font-medium border-l border-slate-200 pl-2">香港學生溫習資源</span>
         </div>
+      </a>
+      
+      <div class="hidden md:flex items-center gap-6 text-xs font-medium text-slate-500">
+        <a href="index.html" class="hover:text-slate-950 py-1 transition">主頁</a>
+        <a href="resources.html" class="text-slate-950 font-semibold border-b-2 border-slate-950 py-1">溫習資源</a>
+        <a href="timetable.html" class="hover:text-slate-950 py-1 transition">考試時間表</a>
+        <a href="countdown.html" class="hover:text-slate-950 py-1 transition">DSE 倒數</a>
       </div>
+
+      <button id="nav-toggle" class="md:hidden p-1.5 rounded text-slate-600 border border-slate-200" aria-label="Toggle Navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+
+    <div id="nav-links" class="hidden border-t border-slate-200 bg-slate-50 px-4 py-2 flex-col gap-1 md:hidden text-xs font-medium">
+      <a href="index.html" class="px-3 py-2 text-slate-600 hover:text-slate-950">主頁</a>
+      <a href="resources.html" class="px-3 py-2 text-slate-950 bg-slate-200/50 rounded">溫習資源</a>
+      <a href="timetable.html" class="px-3 py-2 text-slate-600 hover:text-slate-950">考試時間表</a>
+      <a href="countdown.html" class="px-3 py-2 text-slate-600 hover:text-slate-950">DSE 倒數</a>
     </div>
   </nav>
 
-  <div class="max-w-5xl mx-auto px-6 py-12">
-    <h2 class="text-4xl font-semibold mb-3 text-center text-zinc-900">公民與社會發展科</h2>
-    <p class="text-center text-zinc-600 mb-10">Citizenship and Social Development • 歷屆試題</p>
-
-  <div class="space-y-4">
-        <div class="flex">
-          <span class="bg-emerald-100 text-emerald-700 px-4 py-1 rounded-full text-sm font-semibold tracking-wide">2024</span>
-        </div>
-
-        <div class="bg-white border border-zinc-200 rounded-3xl p-8 shadow-sm space-y-8">
-          <div class="border-b pb-4">
-            <h4 class="text-3xl font-bold text-zinc-900">問題 1</h4>
-          </div>
-          
-          <div class="space-y-6">
-            <h5 class="font-semibold text-zinc-800 text-base flex items-center gap-2">
-              <span class="w-2 h-2 bg-emerald-500 rounded-full"></span> 資料
-            </h5>
-            
-            <div class="border border-zinc-200 rounded-xl p-5 bg-zinc-50 max-w-2xl mx-auto shadow-xs text-xs text-zinc-700 space-y-2 leading-relaxed text-justify">
-              <p class="font-semibold text-zinc-600 mb-1"><strong>資料 A：取材自 2023 年報章報道</strong></p>
-              <p class="indent-[2em]">中國共產黨第二十次全國代表大會上的報告，首次將教育、科技、人才作為一個整體進行論述，強調教育、科技、人才是全面建設社會主義現代化國家的基礎。</p>
-              <p class="indent-[2em]">教育是社會進步的重要基石。一個國家要富強，必須有繁榮的經濟、昌盛的文化、強大的國防，而這一切都要靠教育來奠基。教育肩負培養人才的重要使命，對提高人民綜合素質、促進人民的全面發展、實現中華民族偉大復興，具有決定性意義。</p>
-              <p class="indent-[2em]">教育是提升科技水平、涵養人才資源、激發創新的根本。現今世界的綜合國力競爭，畢竟是人才競爭。人才已經成為推動經濟社會發展的重要資源。</p>
-            </div>
-
-            <div class="border border-zinc-200 rounded-xl p-5 bg-zinc-50 max-w-2xl mx-auto shadow-xs">
-              <p class="text-xs text-zinc-600 font-semibold mb-3"><strong>資料 B：取材自中國教育部 2018-2022 年的國家統計資料</strong></p>
-              <div class="overflow-hidden border border-zinc-200 rounded-lg bg-white">
-                <table class="w-full text-left border-collapse text-xs">
-                  <thead>
-                    <tr class="bg-zinc-100 border-b border-zinc-200 text-zinc-700 font-semibold text-center">
-                      <th class="p-2.5 border-r border-zinc-200" rowspan="2">年份</th>
-                      <th class="p-2.5 border-b border-r border-zinc-200" colspan="2">義務教育 *</th>
-                      <th class="p-2.5 border-b border-zinc-200" colspan="2">高等教育</th>
-                    </tr>
-                    <tr class="bg-zinc-50 border-b border-zinc-200 text-zinc-600 font-semibold text-center">
-                      <th class="p-2.5 border-r border-zinc-200">學校數目</th>
-                      <th class="p-2.5 border-r border-zinc-200">在校學生人數 (億人)</th>
-                      <th class="p-2.5 border-r border-zinc-200">學校數目</th>
-                      <th class="p-2.5">在校學生人數 (萬人)</th>
-                    </tr>
-                  </thead>
-                  <tbody class="divide-y divide-zinc-200 text-zinc-600 text-center font-mono">
-                    <tr>
-                      <td class="p-2.5 font-sans">2018</td>
-                      <td class="p-2.5 border-r">213 800</td>
-                      <td class="p-2.5 border-r">1.50</td>
-                      <td class="p-2.5 border-r">2 663</td>
-                      <td class="p-2.5">3 833</td>
-                    </tr>
-                    <tr>
-                      <td class="p-2.5 font-sans">2019</td>
-                      <td class="p-2.5 border-r">212 600</td>
-                      <td class="p-2.5 border-r">1.54</td>
-                      <td class="p-2.5 border-r">2 688</td>
-                      <td class="p-2.5">4 002</td>
-                    </tr>
-                    <tr>
-                      <td class="p-2.5 font-sans">2020</td>
-                      <td class="p-2.5 border-r">210 800</td>
-                      <td class="p-2.5 border-r">1.56</td>
-                      <td class="p-2.5 border-r">2 738</td>
-                      <td class="p-2.5">4 183</td>
-                    </tr>
-                    <tr>
-                      <td class="p-2.5 font-sans">2021</td>
-                      <td class="p-2.5 border-r">207 200</td>
-                      <td class="p-2.5 border-r">1.58</td>
-                      <td class="p-2.5 border-r">3 012</td>
-                      <td class="p-2.5">4 430</td>
-                    </tr>
-                    <tr>
-                      <td class="p-2.5 font-sans">2022</td>
-                      <td class="p-2.5 border-r">201 600</td>
-                      <td class="p-2.5 border-r">1.59</td>
-                      <td class="p-2.5 border-r">3 013</td>
-                      <td class="p-2.5">4 655</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <p class="text-[10px] text-zinc-500 mt-2 leading-normal">* 義務教育是指中國為所有適齡兒童提供免費和必須接受的教育。為期九年，一般為六年小學及三年初中。</p>
-            </div>
-
-            <div class="border border-zinc-200 rounded-xl p-5 bg-zinc-50 max-w-2xl mx-auto shadow-xs text-xs text-zinc-700 space-y-2 leading-relaxed text-justify">
-              <p class="font-semibold text-zinc-600 mb-1"><strong>資料 C：取材自 2021 年《中國的全面小康》白皮書</strong></p>
-              <p class="indent-[2em]">中國的教育事業正蓬勃發展，至今已建成當代世界規模最大的教育體系，包括學前教育、初等教育、中等教育、高等教育等。中國教育現代化發展的總體水平已邁入世界中上國家行列。</p>
-              <p class="indent-[2em]">完成九年義務教育的人數不斷增加，高中階段教育全面普及，區域、城鄉教育差距正正在縮小。每個學生都能夠享有公平而有質量的教育，這個願景正在逐步實現。高等學校累計培養了數億名高素質專門人才，高等教育愈入普及化階段。</p>
-            </div>
-          </div>
-
-          <div class="pt-6 border-t border-dashed border-zinc-200 bg-amber-50/50 p-6 rounded-2xl space-y-4">
-            <h5 class="font-semibold text-amber-900 text-base flex items-center gap-2 mb-2">
-              ❓ 題目
-            </h5>
-            
-            <div class="bg-white p-5 rounded-xl border border-zinc-200 shadow-xs text-xs leading-relaxed space-y-3">
-              <p class="font-semibold text-zinc-900 flex gap-1.5">
-                <span class="bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded text-[10px]">分值: 1分</span>
-                <span>(a) 根據資料 A，以下哪項陳述是正確的？</span>
-              </p>
-              <div class="grid grid-cols-1 gap-2 pl-2 text-zinc-600">
-                <label class="flex items-start gap-2.5 cursor-pointer hover:text-zinc-900"><input type="radio" name="real_q1a" class="mt-0.5"> <span>A. 現今世界的綜合國力競爭主要是軍備競賽。</span></label>
-                <label class="flex items-start gap-2.5 cursor-pointer hover:text-zinc-900"><input type="radio" name="real_q1a" class="mt-0.5"> <span>B. 對中國的發展而言，科技比教育更為重要。</span></label>
-                <label class="flex items-start gap-2.5 cursor-pointer hover:text-zinc-900"><input type="radio" name="real_q1a" class="mt-0.5"> <span>C. 教育能提升科技水平和涵養人才資源。</span></label>
-                <label class="flex items-start gap-2.5 cursor-pointer hover:text-zinc-900"><input type="radio" name="real_q1a" class="mt-0.5"> <span>D. 只要有繁榮的經濟，人民的綜合素質便會提高。</span></label>
-              </div>
-            </div>
-
-            <div class="bg-white p-5 rounded-xl border border-zinc-200 shadow-xs text-xs leading-relaxed space-y-2">
-              <div class="flex items-start gap-2">
-                <span class="bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded text-[10px] shrink-0">分值: 3分</span>
-                <p class="font-semibold text-zinc-900">
-                  (b) 根據資料 B，就義務教育及高等教育的發展，<u>分別描述一個</u>特徵。
-                </p>
-              </div>
-            </div>
-
-            <div class="bg-white p-5 rounded-xl border border-zinc-200 shadow-xs text-xs leading-relaxed space-y-2">
-              <div class="flex items-start gap-2">
-                <span class="bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded text-[10px] shrink-0">分值: 6分</span>
-                <p class="font-semibold text-zinc-900">
-                  (c) 為什麼教育對提升中國綜合國力是重要的？參考所提供的資料及就你所知，解釋你的答案。
-                </p>
-              </div>
-            </div>
-
-            <div class="bg-white p-5 rounded-xl border border-zinc-200 shadow-xs text-xs leading-relaxed space-y-2">
-              <div class="flex items-start gap-2">
-                <span class="bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded text-[10px] shrink-0">分值: 4分</span>
-                <p class="font-semibold text-zinc-900">
-                  (d) 除教育外，以下三個範疇亦能展現中國綜合國力的提升：<br>
-                  <span class="inline-block mt-1 font-mono text-zinc-600 pl-4">i. 經濟 &nbsp;&nbsp; ii. 科技 &nbsp;&nbsp; iii. 文化</span><br>
-                  <span class="block mt-1">從這三個範疇中任選<u>兩個</u>，說明中國在該兩個範疇的發展能如何展現國家綜合國力的提升。</span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+  <main class="max-w-6xl mx-auto px-4 sm:px-8 py-12">
+    
+    
+    <div class="space-y-3 border-b border-slate-200 pb-6 mb-10">
+      <div class="flex items-center gap-2 text-xs font-medium text-slate-400">
+        <a href="index.html" class="hover:text-slate-600 transition">主頁</a>
+        <span>/</span>
+        <a href="resources.html" class="hover:text-slate-600 transition">溫習資源</a>
+        <span>/</span>
+        <span class="text-slate-600">公民與社會發展科</span>
       </div>
-
-
-      <div class="space-y-4 pt-8 border-t border-zinc-200">
-        <div class="bg-white border border-zinc-200 rounded-3xl p-8 shadow-sm space-y-8">
-          <div class="border-b pb-4">
-            <h4 class="text-3xl font-bold text-zinc-900">問題 2</h4>
-          </div>
-          
-          <div class="space-y-6">
-            <h5 class="font-semibold text-zinc-800 text-base flex items-center gap-2">
-              <span class="w-2 h-2 bg-emerald-500 rounded-full"></span> 資料
-            </h5>
-            
-            <div class="border border-zinc-200 rounded-xl p-5 bg-zinc-50 max-w-2xl mx-auto shadow-xs text-xs text-zinc-700 space-y-2 leading-relaxed text-justify">
-              <p class="font-semibold text-zinc-600 mb-1"><strong>資料 A：取材自「全民國家安全教育日」網站</strong></p>
-              <p class="indent-[2em]">總體國家安全觀將國家安全的涵蓋面擴展至不同重點領域，以應付新時代的挑戰及需要，保障國家核心利益及人民安全。人工智能安全就是其中一個重點領域。</p>
-              <p class="indent-[2em]">人工智能的應用例子 include 臉部識別、聊天機器人、數據分析等。人工智能具備潛力促進生產力及經濟增長，但亦存在私隱數據洩露等潛在風險。維護人工智能安全，我們必須確保人工智能可靠、可控。</p>
-            </div>
-
-            <div class="border border-zinc-200 rounded-xl p-5 bg-zinc-50 max-w-2xl mx-auto shadow-xs text-xs text-zinc-700 space-y-2 leading-relaxed text-justify">
-              <p class="font-semibold text-zinc-600 mb-1"><strong>資料 B：取材自 2023 年新聞文章</strong></p>
-              <p class="mb-2">智能聊天機器人程式（例如 ChatGPT）在學術界的應用，成為全球教育界的關注點。以下是教育工作者對於使用智能聊天機器人程式的一些觀點：</p>
-              <ul class="list-disc pl-5 space-y-1 text-zinc-600">
-                <li>擁抱科技不代表要不加批判地採納，我們必須顧及使用智能聊天機器人程式所帶來的正面和負面影響。</li>
-                <li>使用智能聊天機器人程式的難處，在於怎樣篩選其所提供的大量資訊。</li>
-                <li>學生需要培養善用人工智能科技的能力，例如辨別智能聊天機器人程式所回覆的資訊的真偽。</li>
-              </ul>
-            </div>
-
-            <div class="border border-zinc-200 rounded-xl p-5 bg-zinc-50 max-w-2xl mx-auto shadow-xs text-xs text-zinc-700 space-y-2 leading-relaxed text-justify">
-              <p class="font-semibold text-zinc-600 mb-1"><strong>資料 C：取材自 2022 年網上文章</strong></p>
-              <p class="indent-[2em]">科技日新月異，人工智能科技、互聯網技術等急遽發展，但亦為社會帶來一定的挑戰。</p>
-              <p class="indent-[2em]">要適應和應對科技的轉變和挑戰，我們便需要培養資訊素養。例如，如今資訊泛濫，我們必須學會辨別資訊的真偽；網絡公審、「起底」情況頻繁，我們需要辨別在網絡發表言論的合適時機和情況。</p>
-              <p class="indent-[2em]">科技急遽發展，為社會帶來前所未有的改變。科技使用者必須具備良好的資訊素養，才能夠合乎道德及有效地運用資訊和資訊科技。</p>
-            </div>
-          </div>
-
-          <div class="pt-6 border-t border-dashed border-zinc-200 bg-amber-50/50 p-6 rounded-2xl space-y-4">
-            <h5 class="font-semibold text-amber-900 text-base flex items-center gap-2 mb-2">
-              ❓ 題目
-            </h5>
-            
-            <div class="bg-white p-5 rounded-xl border border-zinc-200 shadow-xs text-xs leading-relaxed space-y-3">
-              <p class="font-semibold text-zinc-900 flex gap-1.5">
-                <span class="bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded text-[10px]">分值: 1分</span>
-                <span>(a) 以下哪些是資訊科技發展的特徵？</span>
-              </p>
-              <div class="pl-2 space-y-1 text-zinc-600 font-medium bg-zinc-50 p-2.5 rounded-lg border border-zinc-100 max-w-xs">
-                <p>(1) 數據化</p>
-                <p>(2) 訊息化</p>
-                <p>(3) 智能化</p>
-              </div>
-              <div class="grid grid-cols-2 gap-2 pl-2 text-zinc-600 pt-1">
-                <label class="flex items-center gap-2.5 cursor-pointer hover:text-zinc-900"><input type="radio" name="real_q2a"> A. 只有 (1) 及 (2)</label>
-                <label class="flex items-center gap-2.5 cursor-pointer hover:text-zinc-900"><input type="radio" name="real_q2a"> B. 只有 (1) 及 (3)</label>
-                <label class="flex items-center gap-2.5 cursor-pointer hover:text-zinc-900"><input type="radio" name="real_q2a"> C. 只有 (2) 及 (3)</label>
-                <label class="flex items-center gap-2.5 cursor-pointer hover:text-zinc-900"><input type="radio" name="real_q2a"> D. (1)、(2) 及 (3)</label>
-              </div>
-            </div>
-
-            <div class="bg-white p-5 rounded-xl border border-zinc-200 shadow-xs text-xs leading-relaxed space-y-2">
-              <div class="flex items-start gap-2">
-                <span class="bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded text-[10px] shrink-0">分值: 2分</span>
-                <p class="font-semibold text-zinc-900">
-                  (b) 國家安全涵蓋不同重點領域。除「人工智能安全」外，指出另外<u>兩個</u>重點領域。
-                </p>
-              </div>
-            </div>
-
-            <div class="bg-white p-5 rounded-xl border border-zinc-200 shadow-xs text-xs leading-relaxed space-y-2">
-              <div class="flex items-start gap-2">
-                <span class="bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded text-[10px] shrink-0">分值: 4分</span>
-                <p class="font-semibold text-zinc-900">
-                  (c) 參考資料 B，討論在教育上應用智能聊天機器人程式的一項<u>正面影響</u>及一項<u>負面影響</u>。
-                </p>
-              </div>
-            </div>
-
-            <div class="bg-white p-5 rounded-xl border border-zinc-200 shadow-xs text-xs leading-relaxed space-y-2">
-              <div class="flex items-start gap-2">
-                <span class="bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded text-[10px] shrink-0">分值: 8分</span>
-                <p class="font-semibold text-zinc-900">
-                  (d) 「生活在現今社會，人們應具備資訊素養。」參考所提供的資料及就你所知，解釋這個看法。
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+      
+      <div class="border-l-2 border-slate-900 pl-4 py-0.5">
+        <h2 class="text-xl font-bold tracking-tight text-slate-950">公民與社會發展科</h2>
+        <p class="text-xs text-slate-400">Citizenship and Social Development — 歷屆試題與資料分析專區</p>
       </div>
-
-
-      <div class="space-y-4 pt-8 border-t border-zinc-200">
-        <div class="bg-white border border-zinc-200 rounded-3xl p-8 shadow-sm space-y-8">
-          <div class="border-b pb-4">
-            <h4 class="text-3xl font-bold text-zinc-900">問題 3</h4>
-          </div>
-          
-          <div class="space-y-6">
-            <h5 class="font-semibold text-zinc-800 text-base flex items-center gap-2">
-              <span class="w-2 h-2 bg-emerald-500 rounded-full"></span> 資料
-            </h5>
-            
-            <div class="border border-zinc-200 rounded-xl p-5 bg-zinc-50 max-w-2xl mx-auto shadow-xs text-xs text-zinc-700 space-y-2 leading-relaxed text-justify">
-              <p class="font-semibold text-zinc-600 mb-1"><strong>資料 A：取材自 2023 年政府新聞公報及內地政府網站</strong></p>
-              <p class="indent-[2em]">廣深港高速鐵路（高鐵）香港段自 2018 年通車後，大大縮短往來香港與內地主要城市的時間。高鐵網絡連接香港與多個內地站點，包括大灣區內的多個城市，建構了「一小時生活圈」，促進了兩地人員往來。</p>
-              <p class="indent-[2em]">此外，中央及地方政府推出了多項便利香港居民在內地發展的措施。例如，符合條件的香港居民可以在內地申請居住證，享有與內地居民同等的義務教育、基本醫療等公共服務；內地多個大灣區城市亦設立了青年創新創業基地，為香港青年提供資金扶持、租金減免及創業指導等支援。</p>
-            </div>
-
-            <div class="border border-zinc-200 rounded-xl p-5 bg-zinc-50 max-w-2xl mx-auto shadow-xs text-xs text-zinc-700 space-y-2 leading-relaxed text-justify">
-              <p class="font-semibold text-zinc-600 mb-1"><strong>資料 B：一個關於香港青年在粵港澳大灣區（內地城市）發展意向的調查</strong></p>
-              <p class="mb-2">該調查訪問了數百名香港青年，以下是部分調查結果的摘要：</p>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-zinc-600 mt-2">
-                <div class="bg-white p-3.5 rounded-xl border border-zinc-200">
-                  <p class="font-semibold text-zinc-700 mb-1">📊 考慮到內地大灣區城市發展的誘因：</p>
-                  <ul class="list-disc pl-4 space-y-0.5">
-                    <li>內地電商及創科行業發展蓬勃，機會較多</li>
-                    <li>大灣區內地城市的居住成本及生活指數較低</li>
-                    <li>政府提供的創業資助及青年補貼具吸引力</li>
-                  </ul>
-                </div>
-                <div class="bg-white p-3.5 rounded-xl border border-zinc-200">
-                  <p class="font-semibold text-zinc-700 mb-1">⚠️ 移居或到內地大灣區城市發展的顧慮：</p>
-                  <ul class="list-disc pl-4 space-y-0.5">
-                    <li>對內地的生活環境及社會風俗不夠熟悉</li>
-                    <li>擔心人脈網絡留在香港，內地社交圈子需重新建立</li>
-                    <li>兩地法規、稅制及專業資格認證存在差異</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div class="border border-zinc-200 rounded-xl p-5 bg-zinc-50 max-w-2xl mx-auto shadow-xs text-xs text-zinc-700 space-y-2 leading-relaxed text-justify">
-              <p class="font-semibold text-zinc-600 mb-1"><strong>資料 C：取材自 2023 年報章報道</strong></p>
-              <p class="indent-[2em]">近年，香港教育局及社會各界積極組織青年學生前往內地進行考察與參觀活動。活動內容豐富多元，包括安排學生親身體驗乘車往返兩地的高速鐵路，以及參觀內地的歷史遺蹟、知名科技企業與文創園區。</p>
-              <p class="indent-[2em]">這些考察活動讓香港青少年有機會親眼看見國家的最新科技突破，同時近距離接觸悠久的歷史文化遺產。不少參與的同學表示，親身體驗讓他們更直觀地感受到了國家的現代化發展步伐，並對中華文化的深厚底蘊有了更深一層的體會。</p>
-            </div>
-          </div>
-
-          <div class="pt-6 border-t border-dashed border-zinc-200 bg-amber-50/50 p-6 rounded-2xl space-y-4">
-            <h5 class="font-semibold text-amber-900 text-base flex items-center gap-2 mb-2">
-              ❓ 題目
-            </h5>
-            
-            <div class="bg-white p-5 rounded-xl border border-zinc-200 shadow-xs text-xs leading-relaxed space-y-3">
-              <p class="font-semibold text-zinc-900 flex gap-1.5">
-                <span class="bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded text-[10px]">分值: 1分</span>
-                <span>(a) 根據資料 A，廣深港高速鐵路（高鐵）香港段的通車建構了甚麼生活圈？</span>
-              </p>
-              <div class="grid grid-cols-2 gap-2 pl-2 text-zinc-600">
-                <label class="flex items-center gap-2.5 cursor-pointer hover:text-zinc-900"><input type="radio" name="real_q3a"> A. 半小時生活圈</label>
-                <label class="flex items-center gap-2.5 cursor-pointer hover:text-zinc-900"><input type="radio" name="real_q3a"> B. 一小時生活圈</label>
-                <label class="flex items-center gap-2.5 cursor-pointer hover:text-zinc-900"><input type="radio" name="real_q3a"> C. 兩小時生活圈</label>
-                <label class="flex items-center gap-2.5 cursor-pointer hover:text-zinc-900"><input type="radio" name="real_q3a"> D. 三小時生活圈</label>
-              </div>
-            </div>
-
-            <div class="bg-white p-5 rounded-xl border border-zinc-200 shadow-xs text-xs leading-relaxed space-y-2">
-              <div class="flex items-start gap-2">
-                <span class="bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded text-[10px] shrink-0">分值: 2分</span>
-                <p class="font-semibold text-zinc-900">
-                  (b) 根據資料 A，指出<u>兩項</u>便利香港居民在內地發展的公共服務或支援措施。
-                </p>
-              </div>
-            </div>
-
-            <div class="bg-white p-5 rounded-xl border border-zinc-200 shadow-xs text-xs leading-relaxed space-y-2">
-              <div class="flex items-start gap-2">
-                <span class="bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded text-[10px] shrink-0">分值: 4分</span>
-                <p class="font-semibold text-zinc-900">
-                  (c) 根據資料 B，香港青年對前往粵港澳大灣區（內地城市）發展有何<u>誘因</u>與<u>顧慮</u>？試<u>各舉一項</u>解釋。
-                </p>
-              </div>
-            </div>
-
-            <div class="bg-white p-5 rounded-xl border border-zinc-200 shadow-xs text-xs leading-relaxed space-y-2">
-              <div class="flex items-start gap-2">
-                <span class="bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded text-[10px] shrink-0">分值: 4分</span>
-                <p class="font-semibold text-zinc-900">
-                  (d) 參考資料 C，內地「考察與參觀活動」（如親身體驗高鐵及參觀歷史遺蹟），對於提升香港青少年的國民身份認同及文化自信有何正面幫助？試加以分析。
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </div>
 
-  <div class="w-full bg-transparent px-6 mt-20">
-    <div class="bg-white border border-zinc-200 rounded-[2.5rem] p-12 text-center text-xs text-zinc-500 max-w-4xl mx-auto shadow-sm leading-relaxed">
-      <p>以上只係歷屆公民與社會發展科題目總結同溫習指引，全部內容只供個人學習用途。</p>
-      <p class="mt-3">我們不會提供或上載任何官方考試試卷、完整過去試題或評卷參考。</p>
-      <p class="mt-4">
-        官方過去試題、樣本試卷及考生表現示例，請到 
-        <a href="https://www.hkeaa.edu.hk/" target="_blank" class="underline text-blue-600 hover:text-blue-700 font-medium">HKEAA 官網</a> 查閱或購買。
-      </p>
+    
+    <div class="mb-14 space-y-4">
+      <div class="flex">
+        <span class="px-1.5 py-0.5 bg-slate-900 text-white rounded text-[10px] font-bold tracking-wide">2024</span>
+      </div>
+
+      <div class="border border-slate-200 bg-white rounded-xl p-6 hover:border-slate-400 hover:shadow-sm transition space-y-6">
+        <div class="border-b border-slate-100 pb-3 flex justify-between items-center">
+          <h4 class="text-sm font-bold text-slate-950 tracking-tight">問題 1</h4>
+          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Theme: Education & Power</span>
+        </div>
+        
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-900 uppercase tracking-wider">
+            <span class="w-1.5 h-1.5 bg-slate-950 rounded-full"></span> 評核資料
+          </div>
+          
+          
+          <div class="border border-slate-150 bg-slate-50/50 rounded-lg p-4 text-xs text-slate-700 space-y-2 leading-relaxed text-justify">
+            <p class="font-bold text-slate-800">資料 A：取材自 2023 年報章報道</p>
+            <p class="indent-[2em]">中國共產黨第二十次全國代表大會上的報告，首次將教育、科技、人才作為一個整體進行論述，強調教育、科技、人才是全面建設社會主義現代化國家的基礎。</p>
+            <p class="indent-[2em]">教育是社會進步的重要基石。一個國家要富強，必須有繁榮的經濟、昌盛的文化、強大的國防，而這一切都要靠教育來奠基。教育肩負培養人才的重要使命，對提高人民綜合素質、促進人民的全面發展、實現中華民族偉大復興，具有決定性意義。</p>
+            <p class="indent-[2em]">教育是提升科技水平、涵養人才資源、激發創新的根本。現今世界的綜合國力競爭，畢竟是人才競爭。人才已經成為推動經濟社會發展的重要資源。</p>
+          </div>
+
+          
+          <div class="border border-slate-150 bg-slate-50/50 rounded-lg p-4">
+            <p class="text-xs font-bold text-slate-800 mb-3">資料 B：取材自中國教育部 2018-2022 年的國家統計資料</p>
+            <div class="overflow-x-auto border border-slate-200 rounded-md bg-white">
+              <table class="w-full text-left border-collapse text-xs">
+                <thead>
+                  <tr class="bg-slate-50 border-b border-slate-200 text-slate-800 font-bold text-center">
+                    <th class="p-2 border-r border-slate-200" rowspan="2">年份</th>
+                    <th class="p-2 border-b border-r border-slate-200" colspan="2">義務教育 *</th>
+                    <th class="p-2 border-b border-slate-200" colspan="2">高等教育</th>
+                  </tr>
+                  <tr class="bg-slate-50/50 border-b border-slate-200 text-slate-600 font-medium text-center">
+                    <th class="p-2 border-r border-slate-200">學校數目</th>
+                    <th class="p-2 border-r border-slate-200">在校學生人數 (億人)</th>
+                    <th class="p-2 border-r border-slate-200">學校數目</th>
+                    <th class="p-2">在校學生人數 (萬人)</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200 text-slate-600 text-center font-mono">
+                  <tr class="hover:bg-slate-50/30">
+                    <td class="p-2 font-sans border-r border-slate-150">2018</td>
+                    <td class="p-2 border-r border-slate-150">213 800</td>
+                    <td class="p-2 border-r border-slate-150">1.50</td>
+                    <td class="p-2 border-r border-slate-150">2 663</td>
+                    <td class="p-2">3 833</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50/30">
+                    <td class="p-2 font-sans border-r border-slate-150">2019</td>
+                    <td class="p-2 border-r border-slate-150">212 600</td>
+                    <td class="p-2 border-r border-slate-150">1.54</td>
+                    <td class="p-2 border-r border-slate-150">2 688</td>
+                    <td class="p-2">4 002</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50/30">
+                    <td class="p-2 font-sans border-r border-slate-150">2020</td>
+                    <td class="p-2 border-r border-slate-150">210 800</td>
+                    <td class="p-2 border-r border-slate-150">1.56</td>
+                    <td class="p-2 border-r border-slate-150">2 738</td>
+                    <td class="p-2">4 183</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50/30">
+                    <td class="p-2 font-sans border-r border-slate-150">2021</td>
+                    <td class="p-2 border-r border-slate-150">207 200</td>
+                    <td class="p-2 border-r border-slate-150">1.58</td>
+                    <td class="p-2 border-r border-slate-150">3 012</td>
+                    <td class="p-2 tracking-tight">4 430</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50/30">
+                    <td class="p-2 font-sans border-r border-slate-150">2022</td>
+                    <td class="p-2 border-r border-slate-150">201 600</td>
+                    <td class="p-2 border-r border-slate-150">1.59</td>
+                    <td class="p-2 border-r border-slate-150">3 013</td>
+                    <td class="p-2">4 655</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="text-[10px] text-slate-400 mt-2 leading-relaxed">* 義務教育是指中國為所有適齡兒童提供免費和必須接受的教育。為期九年，一般為六年小學及三年初中。</p>
+          </div>
+
+         
+          <div class="border border-slate-150 bg-slate-50/50 rounded-lg p-4 text-xs text-slate-700 space-y-2 leading-relaxed text-justify">
+            <p class="font-bold text-slate-800">資料 C：取材自 2021 年《中國的全面小康》白皮書</p>
+            <p class="indent-[2em]">中國的教育事業正蓬勃發展，至今已建成當代世界規模最大的教育體系，包括學前教育、初等教育、中等教育、高等教育等。中國教育現代化發展的總體水平已邁入世界中上國家行列。</p>
+            <p class="indent-[2em]">完成九年義務教育的人數不斷增加，高中階段教育全面普及，區域、城鄉教育差距正正在縮小。每個學生都能夠享有公平而有質量的教育，這個願景正在逐步實現。高等學校累計培養了數億名高素質專門人才，高等教育愈入普及化階段。</p>
+          </div>
+        </div>
+
+        
+        <div class="pt-5 border-t border-dashed border-slate-200 space-y-3">
+          <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">試題部分</div>
+          
+          <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 text-xs space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="px-1.5 py-0.5 bg-slate-900 text-white rounded text-[9px] font-medium">1 分</span>
+              <p class="font-bold text-slate-950">(a) 根據資料 A，以下哪項陳述是正確的？</p>
+            </div>
+            <div class="grid grid-cols-1 gap-2 pl-2 text-slate-600">
+              <label class="flex items-start gap-2.5 cursor-pointer hover:text-slate-950"><input type="radio" name="q1a" class="mt-0.5 accent-slate-900"> <span>A. 現今世界的綜合國力競爭主要是軍備競賽。</span></label>
+              <label class="flex items-start gap-2.5 cursor-pointer hover:text-slate-950"><input type="radio" name="q1a" class="mt-0.5 accent-slate-900"> <span>B. 對中國的發展而言，科技比教育更為重要。</span></label>
+              <label class="flex items-start gap-2.5 cursor-pointer hover:text-slate-950"><input type="radio" name="q1a" class="mt-0.5 accent-slate-900"> <span>C. 教育能提升科技水平和涵養人才資源。</span></label>
+              <label class="flex items-start gap-2.5 cursor-pointer hover:text-slate-950"><input type="radio" name="q1a" class="mt-0.5 accent-slate-900"> <span>D. 只要有繁榮的經濟，人民的綜合素質便會提高。</span></label>
+            </div>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 text-xs flex items-start gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-900 text-white rounded text-[9px] font-medium shrink-0">3 分</span>
+            <p class="text-slate-600 leading-relaxed">
+              <strong class="text-slate-950">(b) 根據資料 B，就義務教育及高等教育的發展，<u>分別描述一個</u>特徵。</strong>
+            </p>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 text-xs flex items-start gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-900 text-white rounded text-[9px] font-medium shrink-0">6 分</span>
+            <p class="text-slate-600 leading-relaxed">
+              <strong class="text-slate-950">(c) 為什麼教育對提升中國綜合國力是重要的？參考所提供的資料及就你所知，解釋你的答案。</strong>
+            </p>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 text-xs flex items-start gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-900 text-white rounded text-[9px] font-medium shrink-0">4 分</span>
+            <div class="text-slate-600 leading-relaxed">
+              <strong class="text-slate-950">(d) 除教育外，以下三個範疇亦能展現中國綜合國力的提升：</strong>
+              <div class="my-1 font-mono text-[11px] text-slate-500 pl-4">i. 經濟 &nbsp;&nbsp; ii. 科技 &nbsp;&nbsp; iii. 文化</div>
+              <span>從這三個範疇中任選<u>兩個</u>，說明中國在該兩個範疇的發展能如何展現國家綜合國力的提升。</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <footer class="bg-zinc-900 text-zinc-400 py-12 text-sm text-center w-full mt-24">
-    © 2026 HK WanZaap Station – 由學生為學生而做
+    
+    <div class="mb-14 space-y-4 pt-4 border-t border-slate-200">
+      <div class="border border-slate-200 bg-white rounded-xl p-6 hover:border-slate-400 hover:shadow-sm transition space-y-6">
+        <div class="border-b border-slate-100 pb-3 flex justify-between items-center">
+          <h4 class="text-sm font-bold text-slate-950 tracking-tight">問題 2</h4>
+          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Theme: National Security & Tech</span>
+        </div>
+        
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-900 uppercase tracking-wider">
+            <span class="w-1.5 h-1.5 bg-slate-950 rounded-full"></span> 評核資料
+          </div>
+          
+          
+          <div class="border border-slate-150 bg-slate-50/50 rounded-lg p-4 text-xs text-slate-700 space-y-2 Exploiting leading-relaxed text-justify">
+            <p class="font-bold text-slate-800">資料 A：取材自「全民國家安全教育日」網站</p>
+            <p class="indent-[2em]">總體國家安全觀將國家安全的涵蓋面擴展至不同重點領域，以應付新時代的挑戰及需要，保障國家核心利益及人民安全。人工智能安全就是其中一個重點領域。</p>
+            <p class="indent-[2em]">人工智能的應用例子包括臉部識別、聊天機器人、數據分析等。人工智能具備潛力促進生產力及經濟增長，但亦存在私隱數據洩露等潛在風險。維護人工智能安全，我們必須確保人工智能可靠、可控。</p>
+          </div>
+
+          
+          <div class="border border-slate-150 bg-slate-50/50 rounded-lg p-4 text-xs text-slate-700 space-y-2 leading-relaxed text-justify">
+            <p class="font-bold text-slate-800">資料 B：取材自 2023 年新聞文章</p>
+            <p class="mb-1">智能聊天機器人程式（例如 ChatGPT）在學術界的應用，成為全球教育界的關注點。以下是教育工作者對於使用智能聊天機器人程式的一些觀點：</p>
+            <ul class="list-disc pl-5 space-y-1 text-slate-500 text-[11px]">
+              <li>擁抱科技不代表要不加批判地採納，我們必須顧及使用智能聊天機器人程式所帶來的正面和負面影響。</li>
+              <li>使用智能聊天機器人程式的難處，在於怎樣篩選其所提供的大量資訊。</li>
+              <li>學生需要培養善用人工智能科技的能力，例如辨別智能聊天機器人程式所回覆的資訊的真偽。</li>
+            </ul>
+          </div>
+
+         
+          <div class="border border-slate-150 bg-slate-50/50 rounded-lg p-4 text-xs text-slate-700 space-y-2 leading-relaxed text-justify">
+            <p class="font-bold text-slate-800">資料 C：取材自 2022 年網上文章</p>
+            <p class="indent-[2em]">科技日新月異，人工智能科技、互聯網技術等急遽發展，但亦為社會帶來一定的挑戰。</p>
+            <p class="indent-[2em]">要適應和應對科技的轉變和挑戰，我們便需要培養資訊素養。例如，如今資訊泛濫，我們必須學會辨別資訊的真偽；網絡公審、「起底」情況頻繁，我們需要辨別在網絡發表言論的合適時機和情況。</p>
+            <p class="indent-[2em]">科技急遽發展，為社會帶來前所未行為的改變。科技使用者必須具備良好的資訊素養，才能夠合乎道德及有效地運用資訊和資訊科技。</p>
+          </div>
+        </div>
+
+        
+        <div class="pt-5 border-t border-dashed border-slate-200 space-y-3">
+          <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">試題部分</div>
+          
+          <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 text-xs space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="px-1.5 py-0.5 bg-slate-900 text-white rounded text-[9px] font-medium">1 分</span>
+              <p class="font-bold text-slate-950">(a) 以下哪些是資訊科技發展的特徵？</p>
+            </div>
+            <div class="pl-4 py-2 text-slate-600 font-medium space-y-1 max-w-xs border border-slate-200 bg-white rounded-md mb-2">
+              <p>(1) 數據化</p>
+              <p>(2) 訊息化</p>
+              <p>(3) 智能化</p>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pl-2 text-slate-600">
+              <label class="flex items-center gap-2 cursor-pointer hover:text-slate-950"><input type="radio" name="q2a" class="accent-slate-900"> A. 只有 (1) 及 (2)</label>
+              <label class="flex items-center gap-2 cursor-pointer hover:text-slate-950"><input type="radio" name="q2a" class="accent-slate-900"> B. 只有 (1) 及 (3)</label>
+              <label class="flex items-center gap-2 cursor-pointer hover:text-slate-950"><input type="radio" name="q2a" class="accent-slate-900"> C. 只有 (2) 及 (3)</label>
+              <label class="flex items-center gap-2 cursor-pointer hover:text-slate-950"><input type="radio" name="q2a" class="accent-slate-900"> D. (1)、(2) 及 (3)</label>
+            </div>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 text-xs flex items-start gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-900 text-white rounded text-[9px] font-medium shrink-0">2 分</span>
+            <p class="text-slate-600 leading-relaxed">
+              <strong class="text-slate-950">(b) 國家安全涵蓋不同重點領域。除「人工智能安全」外，指出另外<u>兩個</u>重點領域。</strong>
+            </p>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 text-xs flex items-start gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-900 text-white rounded text-[9px] font-medium shrink-0">4 分</span>
+            <p class="text-slate-600 leading-relaxed">
+              <strong class="text-slate-950">(c) 參考資料 B，討論在教育上應用智能聊天機器人程式的一項<u>正面影響</u>及一項<u>負面影響</u>。</strong>
+            </p>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 text-xs flex items-start gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-900 text-white rounded text-[9px] font-medium shrink-0">8 分</span>
+            <p class="text-slate-600 leading-relaxed">
+              <strong class="text-slate-950">(d) 「生活在現今社會，人們應具備資訊素養。」參考所提供的資料及就你所知，解釋這個看法。</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="mb-14 space-y-4 pt-4 border-t border-slate-200">
+      <div class="border border-slate-200 bg-white rounded-xl p-6 hover:border-slate-400 hover:shadow-sm transition space-y-6">
+        <div class="border-b border-slate-100 pb-3 flex justify-between items-center">
+          <h4 class="text-sm font-bold text-slate-950 tracking-tight">問題 3</h4>
+          <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Theme: GBA & Youth Development</span>
+        </div>
+        
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 text-xs font-bold text-slate-900 uppercase tracking-wider">
+            <span class="w-1.5 h-1.5 bg-slate-950 rounded-full"></span> 評核資料
+          </div>
+          
+        
+          <div class="border border-slate-150 bg-slate-50/50 rounded-lg p-4 text-xs text-slate-700 space-y-2 leading-relaxed text-justify">
+            <p class="font-bold text-slate-800">資料 A：取材自 2023 年政府新聞公報及內地政府網站</p>
+            <p class="indent-[2em]">廣深港高速鐵路（高鐵）香港段自 2018 年通車後，大大縮短往來香港與內地主要城市的時間。高鐵網絡連接香港與多個內地站點，包括大灣區內的多個城市，建構了「一小時生活圈」，促進了兩地人員往來。</p>
+            <p class="indent-[2em]">此外，中央及地方政府推出了多項便利香港居民在內地發展的措施。例如，符合條件的香港居民可以在內地申請居住證，享有與內地居民同等的義務教育、基本醫療等公共服務；內地多個大灣區城市亦設立了青年創新創業基地，為香港青年提供資金扶持、租金減免及創業指導等支援。</p>
+          </div>
+
+          
+          <div class="border border-slate-150 bg-slate-50/50 rounded-lg p-4 text-xs text-slate-700 space-y-2">
+            <p class="font-bold text-slate-800">資料 B：一個關於香港青年在粵港澳大灣區（內地城市）發展意向的調查</p>
+            <p class="text-[11px] text-slate-500">該調查訪問了數百名香港青年，以下是部分調查結果的摘要：</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+              <div class="bg-white p-3.5 rounded-md border border-slate-200">
+                <p class="font-bold text-slate-950 mb-1.5">考慮到內地大灣區城市發展的誘因：</p>
+                <ul class="list-disc pl-4 space-y-1 text-[11px] text-slate-500">
+                  <li>內地電商及創科行業發展蓬勃，機會較多</li>
+                  <li>大灣區內地城市的居住成本及生活指數較低</li>
+                  <li>政府提供的創業資助及青年補貼具吸引力</li>
+                </ul>
+              </div>
+              <div class="bg-white p-3.5 rounded-md border border-slate-200">
+                <p class="font-bold text-slate-950 mb-1.5">移居或到內地大灣區城市發展的顧慮：</p>
+                <ul class="list-disc pl-4 space-y-1 text-[11px] text-slate-500">
+                  <li>對內地的生活環境及社會風俗不夠熟悉</li>
+                  <li>擔心人脈網絡留在香港，內地社交圈子需重新建立</li>
+                  <li>兩地法規、稅制及專業資格認證存在差異</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="border border-slate-150 bg-slate-50/50 rounded-lg p-4 text-xs text-slate-700 space-y-2 leading-relaxed text-justify">
+            <p class="font-bold text-slate-800">資料 C：取材自 2023 年報章報道</p>
+            <p class="indent-[2em]">近年，香港教育局及社會各界積極組織青年學生前往內地進行考察與參觀活動。活動內容豐富多元，包括安排學生親身體驗乘車往返兩地的高速鐵路，以及參觀內地的歷史遺蹟、知名科技企業與文創園區。</p>
+            <p class="indent-[2em]">這些考察活動讓香港青少年有機會親眼看見國家的最新科技突破，同時近距離接觸悠久的歷史文化遺產。不少參與的同學表示，親身體驗讓他們更直觀地感受到了國家的現代化發展步伐，並對中華文化的深厚底蘊有了更深一層的體會。</p>
+          </div>
+        </div>
+
+       
+        <div class="pt-5 border-t border-dashed border-slate-200 space-y-3">
+          <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">試題部分</div>
+          
+          <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 text-xs space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="px-1.5 py-0.5 bg-slate-900 text-white rounded text-[9px] font-medium">1 分</span>
+              <p class="font-bold text-slate-950">(a) 根據資料 A，廣深港高速鐵路（高鐵）香港段的通車建構了甚麼生活圈？</p>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pl-2 text-slate-600">
+              <label class="flex items-center gap-2.5 cursor-pointer hover:text-slate-950"><input type="radio" name="q3a" class="accent-slate-900"> A. 半小時生活圈</label>
+              <label class="flex items-center gap-2.5 cursor-pointer hover:text-slate-950"><input type="radio" name="q3a" class="accent-slate-900"> B. 一小時生活圈</label>
+              <label class="flex items-center gap-2.5 cursor-pointer hover:text-slate-950"><input type="radio" name="q3a" class="accent-slate-900"> C. 兩小時生活圈</label>
+              <label class="flex items-center gap-2.5 cursor-pointer hover:text-slate-950"><input type="radio" name="q3a" class="accent-slate-900"> D. 三小時生活圈</label>
+            </div>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 text-xs flex items-start gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-900 text-white rounded text-[9px] font-medium shrink-0">2 分</span>
+            <p class="text-slate-600 leading-relaxed">
+              <strong class="text-slate-950">(b) 根據資料 A，指出<u>兩項</u>便利香港居民在內地發展的公共服務或支援措施。</strong>
+            </p>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 text-xs flex items-start gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-900 text-white rounded text-[9px] font-medium shrink-0">4 分</span>
+            <p class="text-slate-600 leading-relaxed">
+              <strong class="text-slate-950">(c) 根據資料 B，香港青年對前往粵港澳大灣區（內地城市）發展有何<u>誘因</u>與<u>顧慮</u>？試<u>各舉一項</u>解釋。</strong>
+            </p>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-lg p-4 text-xs flex items-start gap-2">
+            <span class="px-1.5 py-0.5 bg-slate-900 text-white rounded text-[9px] font-medium shrink-0">4 分</span>
+            <p class="text-slate-600 leading-relaxed">
+              <strong class="text-slate-950">(d) 參考資料 C，內地「考察與參觀活動」（如親身體驗高鐵及參觀歷史遺蹟），對於提升香港青少年的國民身份認同及文化自信有何正面幫助？試加以分析。</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="mt-16 bg-slate-50 border border-slate-200/60 rounded-xl p-5 text-center text-xs text-slate-400 leading-relaxed">
+      <p>以上內容僅為歷屆公民與社會發展科題目結構總結與溫習架構，均供個人複習與學術交流用途。</p>
+      <p class="mt-1.5">本站絕不提供或上載任何具版權之考評局官方試卷。如欲閱讀完整歷屆試題與官方答案，請直接前往 <a href="https://www.hkeaa.edu.hk/" target="_blank" class="underline text-slate-600 hover:text-slate-900 font-medium">香港考試及評核局 (HKEAA) 官網</a> 查閱或購買正版書籍。</p>
+    </div>
+
+  </main>
+
+  <footer class="bg-white border-t border-slate-200 mt-16 py-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8 text-slate-400 text-[11px] leading-relaxed">
+      <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
+        <div>
+          <p class="font-medium text-slate-600">© 2027 HK WanZaap Station — 專為香港學生而設的自主學習筆記平臺</p>
+          <p class="mt-0.5">聲明：本站資源僅供個人溫習與學術交流用途。歷屆試題與官方答案請直接向香港考評局購買。</p>
+        </div>
+        <div class="flex gap-4">
+          <a href="https://www.hkeaa.edu.hk/" target="_blank" class="hover:text-slate-600 underline">HKEAA 考評局</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <script>
+    // 行動端導航欄 Toggle 邏輯
     (function(){
       const btn = document.getElementById('nav-toggle');
       const links = document.getElementById('nav-links');
       if(!btn || !links) return;
       btn.addEventListener('click', ()=>{
-        const hidden = links.classList.contains('hidden');
-        if(hidden){
+        if(links.classList.contains('hidden')){
           links.classList.remove('hidden');
           links.classList.add('flex');
-          btn.setAttribute('aria-expanded', 'true');
         } else {
           links.classList.add('hidden');
           links.classList.remove('flex');
-          btn.setAttribute('aria-expanded', 'false');
         }
       });
     })();
